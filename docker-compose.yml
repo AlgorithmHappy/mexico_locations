@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:16
+    container_name: db_mexico_locations
+    environment:
+      POSTGRES_DB: mail_whatsapp_send
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - .volumes/db_mexico_locations:/var/lib/postgresql/data
