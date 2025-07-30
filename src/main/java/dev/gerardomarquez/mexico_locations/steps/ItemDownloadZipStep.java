@@ -19,6 +19,7 @@ import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import dev.gerardomarquez.mexico_locations.utils.Constants;
 import lombok.extern.log4j.Log4j2;
@@ -26,6 +27,7 @@ import lombok.extern.log4j.Log4j2;
 /*
  * En esta clase se define el segundo paso en el que se descargara el archivo de localidades de México
  */
+@Component
 @Log4j2
 public class ItemDownloadZipStep implements Tasklet {
 
@@ -42,8 +44,11 @@ public class ItemDownloadZipStep implements Tasklet {
     private String url;
 
     // Selector del elemento input que inicia la descarga
-    @Value("${browser.input.id}")
+    @Value("${browser.input.button.id}")
     private String inputSelector;
+
+    @Value("${browser.input.radiobutton.id}")
+    private String inputRadioSelector;
 
     // Prefijo del nombre del archivo esperado para la descarga
     @Value("${browser.download.file.name}")
@@ -109,6 +114,10 @@ public class ItemDownloadZipStep implements Tasklet {
             // Esperar a que la página cargue y el elemento esté presente
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(chromeWaitTimeout) );
 
+            WebElement radioElement = wait.until(ExpectedConditions.elementToBeClickable(By.id(inputRadioSelector) ) );
+
+            radioElement.click();
+
             // Encuentra el elemento input por id.
             WebElement inputElement = wait.until(ExpectedConditions.elementToBeClickable(By.id(inputSelector) ) );
             
@@ -125,6 +134,7 @@ public class ItemDownloadZipStep implements Tasklet {
                 downloadedFiles = downloadDirPath.toFile().listFiles((dir, name) ->
                         name.startsWith(expectedFileNamePrefix) && !name.endsWith(chromeIgnoreFile) // Ignorar archivos temporales de Chrome
                 );
+                
                 if (downloadedFiles != null && downloadedFiles.length > Constants.GLOBAL_ZERO) {
                     fileFound = Boolean.TRUE;
                     break;

@@ -11,6 +11,7 @@ import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import dev.gerardomarquez.mexico_locations.utils.Constants;
 import lombok.extern.log4j.Log4j2;
@@ -19,8 +20,9 @@ import lombok.extern.log4j.Log4j2;
  * En esta clase se define el primer paso que consiste en dejar limpia las carpetas donde se van a descargar
  * el archivo .zip y donde se va a descomprimir dicho archivo
  */
+@Component
 @Log4j2
-public class ItemPrepareFilseSystemStep implements Tasklet{
+public class ItemPrepareFileSystemStep implements Tasklet{
 
     /*
      * Ruta del directorio donde se eliminarán los archivos descargados.

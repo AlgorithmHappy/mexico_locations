@@ -12,6 +12,7 @@ import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import dev.gerardomarquez.mexico_locations.dtos.TextFileMexicoLocationsDto;
 import dev.gerardomarquez.mexico_locations.utils.Constants;
@@ -21,6 +22,7 @@ import lombok.extern.log4j.Log4j2;
  * En esta clase se define el cuarto paso en el que se leera el archivo .txt de las localidades
  * de México
  */
+@Component
 @Log4j2
 public class ItemReadFileStep implements Tasklet {
 
@@ -45,9 +47,13 @@ public class ItemReadFileStep implements Tasklet {
     /*
      * Separador de archivos utilizado en el archivo de texto.
      */
-    @Value("${decompress.files.separator}")
+    @Value("${decompress.file.separator}")
     private String fileSeparator;
 
+    /*
+     * {@inheritDoc}
+     * Este método se ejecuta para leer el archivo de texto y convertirlo en una lista de objetos para su posterior guardar en la base de datos.
+     */
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
         String fullFilePathName = filePath + File.separator + fileName + fileExtension; // Asegúrate de que este archivo esté en la misma carpeta que tu clase Java o proporciona la ruta completa
@@ -72,7 +78,7 @@ public class ItemReadFileStep implements Tasklet {
 
                 String[] parts = line.split(fileSeparator);
 
-                if (parts.length >= Constants.TEXT_FILE_SIZE_COLUMNS) {
+                if (parts.length == Constants.TEXT_FILE_SIZE_COLUMNS) {
                     TextFileMexicoLocationsDto location = TextFileMexicoLocationsDto.builder()
                         .d_codigo(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_codigo")].trim() ) // d_codigo
                         .d_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_asenta")].trim() ) // d_asenta
@@ -96,6 +102,14 @@ public class ItemReadFileStep implements Tasklet {
                     log.warn(String.format(Constants.MSG_WARNING_INVALID_LINE, ++lineNumber, line) );
                 }
             }
+            // Guardar la lista de localidades en el contexto del job
+            chunkContext
+                .getStepContext()
+                .getStepExecution()
+                .getJobExecution()
+                .getExecutionContext()
+                .put(Constants.CONTEXT_LIST_MEXICO_LOCATIONS, locations);
+                
         } catch (IOException e) {
             log.error(String.format(Constants.MSG_ERROR_READ_TEXT_FILE, e.getMessage() ) );
         }

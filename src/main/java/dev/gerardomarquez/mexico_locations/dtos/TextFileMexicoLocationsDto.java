@@ -1,5 +1,7 @@
 package dev.gerardomarquez.mexico_locations.dtos;
 
+import java.io.Serializable;
+
 import dev.gerardomarquez.mexico_locations.entities.DataTextRaw;
 import lombok.Builder;
 import lombok.Data;
@@ -9,7 +11,10 @@ import lombok.Data;
  */
 @Data
 @Builder
-public class TextFileMexicoLocationsDto {
+public class TextFileMexicoLocationsDto implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    
     private String d_codigo; // Código Postal asentamiento
     private String d_asenta; // Nombre asentamiento
     private String d_tipo_asenta; // Tipo de asentamiento (Catálogo SEPOMEX)
@@ -27,7 +32,22 @@ public class TextFileMexicoLocationsDto {
     private String c_CP; // Campo Vacio
 
     public DataTextRaw toEntity() {
-        // Aquí puedes implementar la lógica para convertir este DTO a una entidad si es necesario
-        return null; // Placeholder, implementa según tu lógica
+        return DataTextRaw.builder()
+            .d_codigo(this.d_codigo)
+            .d_asenta(this.d_asenta)
+            .d_tipo_asenta(this.d_tipo_asenta)
+            .D_mnpio(this.D_mnpio)
+            .d_estado(this.d_estado)
+            .d_ciudad(this.d_ciudad)
+            .d_CP(this.d_CP)
+            .c_estado(this.c_estado)
+            .c_oficina(this.c_oficina)
+            .c_tipo_asenta(this.c_tipo_asenta)
+            .c_mnpio(this.c_mnpio)
+            .id_asenta_cpcons(this.id_asenta_cpcons)
+            .d_zona(this.d_zona)
+            .c_cve_ciudad(this.c_cve_ciudad)
+            .c_CP(this.c_CP)
+            .build();
     }
 }
