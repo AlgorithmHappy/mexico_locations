@@ -2,8 +2,12 @@ package dev.gerardomarquez.mexico_locations.steps;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,7 +63,7 @@ public class ItemReadFileStep implements Tasklet {
         String fullFilePathName = filePath + File.separator + fileName + fileExtension; // Asegúrate de que este archivo esté en la misma carpeta que tu clase Java o proporciona la ruta completa
         List<TextFileMexicoLocationsDto> locations = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fullFilePathName))) {
+        try (BufferedReader br = new BufferedReader( new InputStreamReader(new FileInputStream(fullFilePathName), Charset.forName("ISO-8859-15") ) ) ) {
             String line;
             boolean isFirstLine = Boolean.TRUE; // Para saltar la línea de descripción
             boolean isSecondLine = Boolean.TRUE; // Para saltar la línea del encabezado
@@ -78,7 +82,7 @@ public class ItemReadFileStep implements Tasklet {
 
                 String[] parts = line.split(fileSeparator);
 
-                if (parts.length == Constants.TEXT_FILE_SIZE_COLUMNS) {
+                if (parts.length == Constants.TEXT_FILE_SIZE_COLUMNS || parts.length == Constants.TEXT_FILE_SIZE_COLUMNS_ALTERNATIVE) {
                     TextFileMexicoLocationsDto location = TextFileMexicoLocationsDto.builder()
                         .d_codigo(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_codigo")].trim() ) // d_codigo
                         .d_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_asenta")].trim() ) // d_asenta

@@ -46,6 +46,7 @@ public class Constants {
         Map.entry("c_CP", 14)
     );
     public static final Integer TEXT_FILE_SIZE_COLUMNS = 15;
+    public static final Integer TEXT_FILE_SIZE_COLUMNS_ALTERNATIVE = 14;
 
     /*
      * Constantes para las claves de los objetos en el contexto del job
