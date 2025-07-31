@@ -82,7 +82,7 @@ public class ItemReadFileStep implements Tasklet {
 
                 String[] parts = line.split(fileSeparator);
 
-                if (parts.length == Constants.TEXT_FILE_SIZE_COLUMNS || parts.length == Constants.TEXT_FILE_SIZE_COLUMNS_ALTERNATIVE) {
+                if (parts.length == Constants.TEXT_FILE_SIZE_COLUMNS) {
                     TextFileMexicoLocationsDto location = TextFileMexicoLocationsDto.builder()
                         .d_codigo(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_codigo")].trim() ) // d_codigo
                         .d_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_asenta")].trim() ) // d_asenta
@@ -93,14 +93,33 @@ public class ItemReadFileStep implements Tasklet {
                         .d_CP(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_CP")].trim() ) // d_CP
                         .c_estado(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_estado")].trim() ) // c_estado
                         .c_oficina(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_oficina")].trim() ) // c_oficina
+                        .c_CP(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_CP")].trim() ) // c_CP
                         .c_tipo_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_tipo_asenta")].trim() ) // c_tipo_asenta
                         .c_mnpio(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_mnpio")].trim() ) // c_mnpio
                         .id_asenta_cpcons(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("id_asenta_cpcons")].trim() ) // id_asenta_cpcons
                         .d_zona(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_zona")].trim() ) // d_zona
                         .c_cve_ciudad(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_cve_ciudad")].trim() ) // c_cve_ciudad
-                        .c_CP(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_CP")].trim() ) // c_CP_final
                         .build();
                     
+                    locations.add(location);
+                } else if(parts.length == Constants.TEXT_FILE_SIZE_COLUMNS_ALTERNATIVE){
+                    TextFileMexicoLocationsDto location = TextFileMexicoLocationsDto.builder()
+                        .d_codigo(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_codigo")].trim() ) // d_codigo
+                        .d_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_asenta")].trim() ) // d_asenta
+                        .d_tipo_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_tipo_asenta")].trim() ) // d_tipo_asenta
+                        .D_mnpio(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("D_mnpio")].trim() ) // D_mnpio
+                        .d_estado(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_estado")].trim() ) // d_estado
+                        .d_ciudad(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_ciudad")].trim() ) // d_ciudad
+                        .d_CP(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_CP")].trim() ) // d_CP
+                        .c_estado(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_estado")].trim() ) // c_estado
+                        .c_oficina(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_oficina")].trim() ) // c_oficina
+                        .c_CP(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_CP")].trim() ) // c_CP
+                        .c_tipo_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_tipo_asenta")].trim() ) // c_tipo_asenta
+                        .c_mnpio(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_mnpio")].trim() ) // c_mnpio
+                        .id_asenta_cpcons(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("id_asenta_cpcons")].trim() ) // id_asenta_cpcons
+                        .d_zona(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_zona")].trim() ) // d_zona
+                        .build();
+
                     locations.add(location);
                 } else {
                     log.warn(String.format(Constants.MSG_WARNING_INVALID_LINE, ++lineNumber, line) );

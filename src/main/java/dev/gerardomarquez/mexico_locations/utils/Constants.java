@@ -38,12 +38,13 @@ public class Constants {
         Map.entry("d_CP", 6),
         Map.entry("c_estado", 7),
         Map.entry("c_oficina", 8),
-        Map.entry("c_tipo_asenta", 9),     
-        Map.entry("c_mnpio", 10),
-        Map.entry("id_asenta_cpcons", 11),
-        Map.entry("d_zona", 12),
-        Map.entry("c_cve_ciudad", 13),
-        Map.entry("c_CP", 14)
+        Map.entry("c_CP", 9),
+        Map.entry("c_tipo_asenta", 10),     
+        Map.entry("c_mnpio", 11),
+        Map.entry("id_asenta_cpcons", 12),
+        Map.entry("d_zona", 13),
+        Map.entry("c_cve_ciudad", 14)
+        
     );
     public static final Integer TEXT_FILE_SIZE_COLUMNS = 15;
     public static final Integer TEXT_FILE_SIZE_COLUMNS_ALTERNATIVE = 14;
