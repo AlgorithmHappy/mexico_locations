@@ -1,0 +1,90 @@
+Table catalogo_de_zonas {
+  id smallint [primary key]
+  tipo_de_zona varchar
+}
+
+Table estados {
+  id smallint [primary key]
+  clave_de_estado varchar
+  estado varchar
+}
+
+Table catalogo_de_tipos_de_asentamientos{
+  id smallint [primary key]
+  clave_de_tipo_de_asentamiento varchar
+  tipo_de_asentamiento varchar
+}
+
+/*Table cruce_tipos_de_asentamientos_y_zonas{
+  id smallint [primary key]
+  id_tipo_de_asentamiento smallint
+  id_zona smallint
+}*/
+
+Table codigos_postales{
+  id integer [primary key]
+  codigo_postal varchar
+  id_oficina integer
+}
+
+Table codigos_oficina{
+  id integer [primary key]
+  clave_oficina varchar
+  d_cp varchar
+}
+
+Table municipios{
+  id integer [primary key]
+  municipio varchar
+}
+
+Table cruce_estados_municipios{
+  id integer [primary key]
+  id_estado integer
+  id_municipio integer
+  clave_municipio varchar
+}
+
+Table ciudades {
+  id integer [primary key]
+  ciudad varchar
+}
+
+Table cruce_ciudades_municipios{
+  id integer  [primary key]
+  clave_ciudad varchar
+  id_ciudad integer
+  id_cruce_estado_municipio integer
+}
+
+Table asentamientos {
+  id integer [primary key]
+  asentamiento varchar
+}
+
+Table cruce_asentamientos_municipios{
+  id integer [primary key]
+  id_asentamiento integer [primary key]
+  id_cruce_estado_municipio integer
+  id_asenta_cpcons varchar
+  id_tipo_de_asentamiento smallint
+  id_zona samllint
+  id_codigo_postal integer
+}
+
+/*Ref cruce_tipos_de_asentamientos_y_zonas: cruce_tipos_de_asentamientos_y_zonas.id_tipo_de_asentamiento > catalogo_de_tipos_de_asentamientos.id
+Ref cruce_tipos_de_asentamientos_y_zonas: cruce_tipos_de_asentamientos_y_zonas.id_zona > catalogo_de_zonas.id*/
+
+Ref codigos_postales: codigos_postales.id_oficina > codigos_oficina.id
+
+Ref cruce_estados_municipios: cruce_estados_municipios.id_estado > estados.id
+Ref cruce_estados_municipios: cruce_estados_municipios.id_municipio > municipios.id
+
+Ref cruce_ciudades_municipios: cruce_ciudades_municipios.id_cruce_estado_municipio > cruce_estados_municipios.id
+Ref cruce_ciudades_municipios: cruce_ciudades_municipios.id_ciudad > ciudades.id
+
+Ref cruce_asentamientos_municipios: cruce_asentamientos_municipios.id_asentamiento > asentamientos.id
+Ref cruce_asentamientos_municipios: cruce_asentamientos_municipios.id_cruce_estado_municipio > cruce_estados_municipios.id
+Ref cruce_asentamientos_municipios: cruce_asentamientos_municipios.id_tipo_de_asentamiento > catalogo_de_tipos_de_asentamientos.id
+Ref cruce_asentamientos_municipios: cruce_asentamientos_municipios.id_zona > catalogo_de_zonas.id
+Ref cruce_asentamientos_municipios: cruce_asentamientos_municipios.id_codigo_postal > codigos_postales.id
