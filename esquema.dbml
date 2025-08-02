@@ -1,70 +1,70 @@
 Table catalogo_de_zonas {
-  id smallint [primary key]
+  id smallint [pk, increment]
   tipo_de_zona varchar
 }
 
 Table estados {
-  id smallint [primary key]
+  id smallint [pk, increment]
   clave_de_estado varchar
   estado varchar
 }
 
 Table catalogo_de_tipos_de_asentamientos{
-  id smallint [primary key]
+  id smallint [pk, increment]
   clave_de_tipo_de_asentamiento varchar
   tipo_de_asentamiento varchar
 }
 
 /*Table cruce_tipos_de_asentamientos_y_zonas{
-  id smallint [primary key]
+  id smallint [pk, increment]
   id_tipo_de_asentamiento smallint
   id_zona smallint
 }*/
 
 Table codigos_postales{
-  id integer [primary key]
+  id integer [pk, increment]
   codigo_postal varchar
   id_oficina integer
 }
 
 Table codigos_oficina{
-  id integer [primary key]
+  id integer [pk, increment]
   clave_oficina varchar
   d_cp varchar
 }
 
 Table municipios{
-  id integer [primary key]
+  id integer [pk, increment]
   municipio varchar
 }
 
 Table cruce_estados_municipios{
-  id integer [primary key]
+  id integer [pk, increment]
   id_estado integer
   id_municipio integer
   clave_municipio varchar
 }
 
 Table ciudades {
-  id integer [primary key]
+  id integer [pk, increment]
   ciudad varchar
 }
 
 Table cruce_ciudades_municipios{
-  id integer  [primary key]
+  id integer  [pk, increment]
   clave_ciudad varchar
   id_ciudad integer
   id_cruce_estado_municipio integer
 }
 
 Table asentamientos {
-  id integer [primary key]
+  id integer [pk, increment]
   asentamiento varchar
 }
 
 Table cruce_asentamientos_municipios{
-  id integer [primary key]
-  id_asentamiento integer [primary key]
+  id integer [pk, increment]
+  id_asentamiento integer
   id_cruce_estado_municipio integer
   id_asenta_cpcons varchar
   id_tipo_de_asentamiento smallint
