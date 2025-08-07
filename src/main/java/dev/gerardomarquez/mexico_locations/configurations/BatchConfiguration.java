@@ -8,12 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
 
-import dev.gerardomarquez.mexico_locations.steps.ItemDecompressFileStep;
-import dev.gerardomarquez.mexico_locations.steps.ItemDownloadZipStep;
-import dev.gerardomarquez.mexico_locations.steps.ItemLoadStep;
-import dev.gerardomarquez.mexico_locations.steps.ItemPrepareFileSystemStep;
-import dev.gerardomarquez.mexico_locations.steps.ItemReadFileStep;
-
+import dev.gerardomarquez.mexico_locations.steps.*;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Configuration
 @EnableBatchProcessing
 public class BatchConfiguration {
+
+    private final ItemDistributeStoreProcedureStep itemDistributeStoreProcedureStep;
 
     /*
      * Paso para preparar el sistema de archivos, asegurando que las carpetas estén limpias
@@ -70,9 +67,10 @@ public class BatchConfiguration {
      * @param jobRepository Repositorio de trabajos de Spring Batch.
      * @param transactionManager Administrador de transacciones de Spring.
      */
-    public BatchConfiguration(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
+    public BatchConfiguration(JobRepository jobRepository, PlatformTransactionManager transactionManager, ItemDistributeStoreProcedureStep itemDistributeStoreProcedureStep) {
         this.jobRepository = jobRepository;
         this.transactionManager = transactionManager;
+        this.itemDistributeStoreProcedureStep = itemDistributeStoreProcedureStep;
     }
 
     /*
@@ -130,6 +128,17 @@ public class BatchConfiguration {
             .build();
     }
 
+    /*
+     * Se crea el quinto paso que consiste en cargar los datos leídos en la base de datos
+     * @return El paso de carga de datos
+     */
+    @Bean
+    public Step itemDistributeSotreProcedureStepBean() {
+        return new StepBuilder("itemDistributeSotreProcedureStepBean", jobRepository)
+            .tasklet(itemDistributeStoreProcedureStep, transactionManager )
+            .build();
+    }
+
     @Bean
     public Job jobMexicoLocationsBean() {
         return new JobBuilder("jobMexicoLocationsBean", jobRepository)
@@ -138,6 +147,7 @@ public class BatchConfiguration {
             .next(itemDecompressFileStepBean() )
             .next(itemReadFileStepBean() )
             .next(itemLoadStepBean() )
+            .next(itemDistributeSotreProcedureStepBean() )
             .build();
     }
 }

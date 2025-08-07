@@ -46,12 +46,12 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 01200|Arturo Martínez|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0079|Urbano|01
 01210|Santa Fe|Pueblo|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||28|010|0082|Urbano|01
 01219|Lomas de Santa Fe|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0084|Urbano|01
+01220|La Estrella|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|2681|Urbano|01
 01220|Bonanza|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0085|Urbano|01
 01220|Cuevitas|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0086|Urbano|01
 01220|El Cuernito|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0087|Urbano|01
 01220|Mártires de Tacubaya|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0089|Urbano|01
 01220|Zenón Delgado|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0090|Urbano|01
-01220|La Estrella|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|2681|Urbano|01
 01230|Campo de Tiro los Gamitos|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0092|Urbano|01
 01230|Los Gamitos|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0097|Urbano|01
 01230|Tlapechico|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0098|Urbano|01
@@ -160,8 +160,8 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 01610|Profesor J. Arturo López Martínez|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|2639|Urbano|01
 01618|Arcos Centenario|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0267|Urbano|01
 01618|Ex-Hacienda de Tarango|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|2745|Urbano|01
-01619|Rinconada de Tarango|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0269|Urbano|01
 01619|La Martinica|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0268|Urbano|01
+01619|Rinconada de Tarango|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0269|Urbano|01
 01620|Lomas de Tarango|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0270|Urbano|01
 01630|Lomas de Puerta Grande|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0271|Urbano|01
 01630|Puerta Grande|Colonia|Álvaro Obregón|Ciudad de México|Ciudad de México|01401|09|01401||09|010|0273|Urbano|01
@@ -586,9 +586,9 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 07164|Graciano Sánchez|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|2717|Urbano|07
 07164|Prados de Cuautepec|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|2718|Urbano|07
 07170|Palmatitla|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|1035|Urbano|07
-07180|Ampliación Cocoyotes|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|2687|Urbano|07
 07180|Cocoyotes|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|1036|Urbano|07
 07180|General Felipe Berriozabal|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|1037|Urbano|07
+07180|Ampliación Cocoyotes|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|2687|Urbano|07
 07183|6 de Junio|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|2688|Urbano|07
 07187|Vista Hermosa|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|1038|Urbano|07
 07188|Tlalpexco|Colonia|Gustavo A. Madero|Ciudad de México|Ciudad de México|07201|09|07201||09|005|1039|Urbano|07
@@ -1624,11 +1624,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20123|Arroyo El Molino|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1029|Urbano|01
 20124|Galerías|Zona comercial|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||33|001|1173|Urbano|01
 20124|Residencial Altaria|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1373|Urbano|01
-20126|Constitución|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0090|Urbano|01
-20126|Libertad|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0091|Urbano|01
-20126|Pozo Bravo Norte|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0092|Urbano|01
-20126|Soberana Convención Revolucionaria|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0094|Urbano|01
-20126|Villa Montaña|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0238|Urbano|01
 20126|Villas de Don Antonio|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0345|Urbano|01
 20126|Los Ángeles|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0353|Rural|01
 20126|Capittala|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0375|Urbano|01
@@ -1661,6 +1656,11 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20126|Villas del Río|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1390|Urbano|01
 20126|El Puertecito|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1391|Urbano|01
 20126|Rinconada del Puertecito|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1394|Urbano|01
+20126|Constitución|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0090|Urbano|01
+20126|Libertad|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0091|Urbano|01
+20126|Pozo Bravo Norte|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0092|Urbano|01
+20126|Soberana Convención Revolucionaria|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0094|Urbano|01
+20126|Villa Montaña|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0238|Urbano|01
 20127|Bosques del Prado Norte|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0095|Urbano|01
 20128|Sartenejo|Rancho|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||48|001|0371|Rural|01
 20129|Lomas del Campestre 1a Sección|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0097|Urbano|01
@@ -1682,10 +1682,10 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20135|Centro Distribuidor de Básicos|Zona comercial|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||33|001|1064|Urbano|01
 20136|La Rinconada|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0110|Urbano|01
 20137|El Plateado|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0111|Urbano|01
-20138|Villas del Vergel|Condominio|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||10|001|0114|Urbano|01
-20138|Cerrada San Miguel|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1372|Urbano|01
 20138|Residencial Pulgas Pandas Norte|Condominio|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||10|001|0112|Urbano|01
 20138|Residencial Pulgas Pandas Sur|Condominio|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||10|001|0113|Urbano|01
+20138|Villas del Vergel|Condominio|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||10|001|0114|Urbano|01
+20138|Cerrada San Miguel|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1372|Urbano|01
 20140|Las Hadas|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0116|Urbano|01
 20140|Morelos|Colonia|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||09|001|0117|Urbano|01
 20140|Andrea|Condominio|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||10|001|1369|Urbano|01
@@ -1725,7 +1725,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20172|La Florida ll|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0360|Urbano|01
 20172|Claustros Loma Dorada|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1170|Urbano|01
 20172|Cumbres III|Colonia|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||09|001|1420|Rural|01
-20174|Villas de las Fuentes|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1421|Urbano|01
 20174|Lomas de Bellavista|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0088|Urbano|01
 20174|Lomas de las Fuentes|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0421|Urbano|01
 20174|Vistas del Valle|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0543|Urbano|01
@@ -1738,6 +1737,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20174|Los Pericos|Colonia|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||09|001|1188|Urbano|01
 20174|Paseos del Sol|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1357|Urbano|01
 20174|Miradores de Santa Elena|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1419|Urbano|01
+20174|Villas de las Fuentes|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|1421|Urbano|01
 20175|La Hojarasca|Condominio|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||10|001|0034|Urbano|01
 20175|Ejido las Cumbres|Fraccionamiento|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||21|001|0147|Urbano|01
 20175|J Refugio Esparza Reyes|Colonia|Aguascalientes|Aguascalientes|Aguascalientes|20001|01|20001||09|001|0148|Urbano|01
@@ -2053,14 +2053,14 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20303|San José Buenavista|Fraccionamiento|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||21|011|0360|Urbano|03
 20303|Santa Elena (Elena)|Granja|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||23|011|0378|Rural|03
 20303|Cerrada San Francisco|Fraccionamiento|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||21|011|1413|Urbano|03
-20304|Santa Bárbara|Fraccionamiento|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||21|011|1344|Urbano|03
-20304|El Cardonal|Fraccionamiento|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||21|011|1395|Rural|03
 20304|Fracción de la Trinidad II|Rancho|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||48|011|0364|Rural|03
 20304|La Escondida (El Salero)|Colonia|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||09|011|0365|Urbano|03
 20304|Monserrat|Granja|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||23|011|0367|Rural|03
 20304|San José del Barranco|Colonia|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||09|011|0368|Urbano|03
 20304|San Juan|Granja|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||23|011|0369|Rural|03
 20304|28 de Abril|Colonia|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||09|011|0370|Urbano|03
+20304|Santa Bárbara|Fraccionamiento|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||21|011|1344|Urbano|03
+20304|El Cardonal|Fraccionamiento|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||21|011|1395|Rural|03
 20305|El Barranco|Colonia|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||09|011|0373|Urbano|03
 20305|El Refugio|Granja|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||23|011|0377|Rural|03
 20305|La Gloria|Rancho|San Francisco de los Romo|Aguascalientes|San Francisco de los Romo|20671|01|20671||48|011|0380|Rural|03
@@ -2097,6 +2097,13 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20320|Las Cañadas|Fraccionamiento|Aguascalientes|Aguascalientes||20999|01|20999||21|001|1427|Urbano|
 20323|Santa María de Gallardo|Ejido|Aguascalientes|Aguascalientes||20999|01|20999||15|001|0417|Rural|
 20324|Jaltomate|Ejido|Aguascalientes|Aguascalientes||20999|01|20999||15|001|0418|Rural|
+20326|La Soledad|Fraccionamiento|Aguascalientes|Aguascalientes||20001|01|20001||21|001|1087|Rural|
+20326|La Rioja|Fraccionamiento|Aguascalientes|Aguascalientes||20001|01|20001||21|001|1125|Urbano|
+20326|Rinconada de San Ignacio|Condominio|Aguascalientes|Aguascalientes||20001|01|20001||10|001|1161|Rural|
+20326|Ex-Hacienda de San Ignacio|Ranchería|Aguascalientes|Aguascalientes||20001|01|20001||29|001|1162|Rural|
+20326|La Perla|Colonia|Aguascalientes|Aguascalientes||20001|01|20001||09|001|1285|Rural|
+20326|San Ignacio II|Colonia|Aguascalientes|Aguascalientes||20001|01|20001||09|001|1286|Rural|
+20326|San Ignacio III|Colonia|Aguascalientes|Aguascalientes||20001|01|20001||09|001|1287|Rural|
 20326|Loretta|Condominio|Aguascalientes|Aguascalientes||20001|01|20001||10|001|0326|Urbano|
 20326|Parque Industrial Tecnopolo 2 (PITP2)|Zona industrial|Aguascalientes|Aguascalientes||20001|01|20001||37|001|0351|Rural|
 20326|La Aurora|Condominio|Aguascalientes|Aguascalientes||20001|01|20001||10|001|0356|Urbano|
@@ -2123,13 +2130,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20326|Reserva Bosque Sereno|Condominio|Aguascalientes|Aguascalientes||20001|01|20001||10|001|0540|Urbano|
 20326|Aventino|Condominio|Aguascalientes|Aguascalientes||20001|01|20001||10|001|0547|Urbano|
 20326|Puesta del Sol|Fraccionamiento|Aguascalientes|Aguascalientes||20001|01|20001||21|001|1086|Urbano|
-20326|La Soledad|Fraccionamiento|Aguascalientes|Aguascalientes||20001|01|20001||21|001|1087|Rural|
-20326|La Rioja|Fraccionamiento|Aguascalientes|Aguascalientes||20001|01|20001||21|001|1125|Urbano|
-20326|Rinconada de San Ignacio|Condominio|Aguascalientes|Aguascalientes||20001|01|20001||10|001|1161|Rural|
-20326|Ex-Hacienda de San Ignacio|Ranchería|Aguascalientes|Aguascalientes||20001|01|20001||29|001|1162|Rural|
-20326|La Perla|Colonia|Aguascalientes|Aguascalientes||20001|01|20001||09|001|1285|Rural|
-20326|San Ignacio II|Colonia|Aguascalientes|Aguascalientes||20001|01|20001||09|001|1286|Rural|
-20326|San Ignacio III|Colonia|Aguascalientes|Aguascalientes||20001|01|20001||09|001|1287|Rural|
 20328|Los Fresnos|Condominio|Aguascalientes|Aguascalientes||20921|01|20921||10|001|0386|Urbano|
 20328|Terranza|Condominio|Aguascalientes|Aguascalientes||20921|01|20921||10|001|0387|Urbano|
 20328|Pocitos|Colonia|Aguascalientes|Aguascalientes||20921|01|20921||09|001|0420|Urbano|
@@ -2322,10 +2322,10 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20404|José Luis Macias|Fraccionamiento|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||21|007|0941|Urbano|06
 20404|La Estancia de Chora|Fraccionamiento|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||21|007|1144|Urbano|06
 20404|Embajadores|Fraccionamiento|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||21|007|1212|Urbano|06
-20405|El Chaveño|Barrio|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||02|007|0005|Urbano|06
-20405|Villas del Camino Real|Fraccionamiento|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||21|007|0015|Urbano|06
 20405|De Guadalupe|Barrio|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||02|007|0942|Urbano|06
 20405|La Paz|Fraccionamiento|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||21|007|1200|Urbano|06
+20405|El Chaveño|Barrio|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||02|007|0005|Urbano|06
+20405|Villas del Camino Real|Fraccionamiento|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||21|007|0015|Urbano|06
 20406|Rinconada de las Piedras|Fraccionamiento|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||21|007|0001|Urbano|06
 20406|Rinconada la Alameda|Fraccionamiento|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||21|007|0006|Urbano|06
 20406|De Chora|Barrio|Rincón de Romos|Aguascalientes|Rincón de Romos|20401|01|20401||02|007|0943|Urbano|06
@@ -2599,12 +2599,12 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20795|La Esperanza|Ranchería|Asientos|Aguascalientes||20999|01|20999||29|002|0650|Rural|
 20795|Ojo de Agua de los Sauces|Ejido|Asientos|Aguascalientes||20999|01|20999||15|002|0697|Rural|
 20795|Pilotos|Ejido|Asientos|Aguascalientes||20999|01|20999||15|002|0704|Rural|
-20796|El Bajío de los Campos|Barrio|Asientos|Aguascalientes||20999|01|20999||02|002|1330|Rural|
 20796|Tanque de Guadalupe|Ejido|Asientos|Aguascalientes||20999|01|20999||15|002|0695|Rural|
 20796|Las Joyas|Ranchería|Asientos|Aguascalientes||20999|01|20999||29|002|0696|Rural|
 20796|El Epazote|Ranchería|Asientos|Aguascalientes||20999|01|20999||29|002|0702|Rural|
 20796|Las Fraguas|Ejido|Asientos|Aguascalientes||20999|01|20999||15|002|0703|Rural|
 20796|El Salitre|Ranchería|Asientos|Aguascalientes||20999|01|20999||29|002|0705|Rural|
+20796|El Bajío de los Campos|Barrio|Asientos|Aguascalientes||20999|01|20999||02|002|1330|Rural|
 20799|Las Negritas|Ejido|Asientos|Aguascalientes||20999|01|20999||15|002|0707|Rural|
 20800|Calvillo Centro|Colonia|Calvillo|Aguascalientes|Calvillo|20801|01|20801||09|003|0708|Urbano|02
 20802|Unión Antorchista|Fraccionamiento|Calvillo|Aguascalientes|Calvillo|20801|01|20801||21|003|0022|Rural|02
@@ -2671,13 +2671,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20832|El Maguey|Ranchería|Calvillo|Aguascalientes||20801|01|20801||29|003|0751|Rural|
 20832|El Sauz|Ranchería|Calvillo|Aguascalientes||20801|01|20801||29|003|0752|Rural|
 20832|La Joya|Ranchería|Calvillo|Aguascalientes||20801|01|20801||29|003|0817|Rural|
-20834|Potrero de los López|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0003|Urbano|
-20834|Las Huertas|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0004|Urbano|
-20834|La Pila|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0005|Urbano|
-20834|La Alberca|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0006|Urbano|
-20834|La Españita|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0007|Urbano|
-20834|Los Baños|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0008|Urbano|
-20834|Los Esparza|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0009|Urbano|
 20834|La Placita|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0010|Urbano|
 20834|La Casa Grande|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0011|Urbano|
 20834|Azoteyita|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0012|Urbano|
@@ -2696,6 +2689,13 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20834|La Fortuna|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0953|Urbano|
 20834|Los Arcos|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0954|Urbano|
 20834|Magisterial|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0955|Urbano|
+20834|Potrero de los López|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0003|Urbano|
+20834|Las Huertas|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0004|Urbano|
+20834|La Pila|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0005|Urbano|
+20834|La Alberca|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0006|Urbano|
+20834|La Españita|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0007|Urbano|
+20834|Los Baños|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0008|Urbano|
+20834|Los Esparza|Colonia|Calvillo|Aguascalientes||20801|01|20801||09|003|0009|Urbano|
 20835|Río Gil|Ranchería|Calvillo|Aguascalientes||20801|01|20801||29|003|0753|Rural|
 20835|Río Gil de Arriba|Ranchería|Calvillo|Aguascalientes||20801|01|20801||29|003|0760|Rural|
 20836|El Capulín|Ranchería|Calvillo|Aguascalientes||20801|01|20801||29|003|0740|Rural|
@@ -2800,24 +2800,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20907|Paseos del Country|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|1178|Urbano|
 20907|Residencial Campo Real|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|1356|Urbano|
 20907|Jardines de Campo Real|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|1438|Urbano|
-20908|Mayorazgo San Cristóbal|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0005|Urbano|
-20908|Belmondo|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0006|Urbano|
-20908|Residencial Marcellana|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0007|Urbano|
-20908|Rinconada Cuauhtémoc|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0011|Urbano|
-20908|Catania Spazio|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0012|Urbano|
-20908|Punta Norte|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0023|Urbano|
-20908|Los Gavilanes|Ranchería|Jesús María|Aguascalientes||20921|01|20921||29|005|0030|Rural|
-20908|Nura|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0033|Urbano|
-20908|Santa Isabel Tola|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0035|Urbano|
-20908|Bosques de los Ciprés|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0038|Urbano|
-20908|Bosques del Paraíso I|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0043|Urbano|
-20908|Bosques del Paraíso II|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0044|Urbano|
-20908|Augusta|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0046|Urbano|
-20908|Bosques del Paraíso VI|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0049|Urbano|
-20908|Bosques del Paraíso III|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0053|Urbano|
-20908|Bosques del Paraíso IV|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0054|Urbano|
-20908|Vivanta|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0058|Urbano|
-20908|Zibá|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0061|Urbano|
 20908|Porta Vitta Residencial|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0070|Urbano|
 20908|Cartagena|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0071|Urbano|
 20908|San Mateo|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0072|Urbano|
@@ -2839,6 +2821,24 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20908|Privanza Gratamira|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|1426|Urbano|
 20908|Tierraverde (Habitat Gran Clase)|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|1428|Urbano|
 20908|Andares|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|1437|Urbano|
+20908|Mayorazgo San Cristóbal|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0005|Urbano|
+20908|Belmondo|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0006|Urbano|
+20908|Residencial Marcellana|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0007|Urbano|
+20908|Rinconada Cuauhtémoc|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0011|Urbano|
+20908|Catania Spazio|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0012|Urbano|
+20908|Punta Norte|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0023|Urbano|
+20908|Los Gavilanes|Ranchería|Jesús María|Aguascalientes||20921|01|20921||29|005|0030|Rural|
+20908|Nura|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0033|Urbano|
+20908|Santa Isabel Tola|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0035|Urbano|
+20908|Bosques de los Ciprés|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0038|Urbano|
+20908|Bosques del Paraíso I|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0043|Urbano|
+20908|Bosques del Paraíso II|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0044|Urbano|
+20908|Augusta|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0046|Urbano|
+20908|Bosques del Paraíso VI|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0049|Urbano|
+20908|Bosques del Paraíso III|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0053|Urbano|
+20908|Bosques del Paraíso IV|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0054|Urbano|
+20908|Vivanta|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0058|Urbano|
+20908|Zibá|Condominio|Jesús María|Aguascalientes||20921|01|20921||10|005|0061|Urbano|
 20909|INFONAVIT Margaritas|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0010|Urbano|
 20909|Villas del Sol|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0019|Urbano|
 20909|Valle de Margaritas|Fraccionamiento|Jesús María|Aguascalientes||20921|01|20921||21|005|0020|Urbano|
@@ -2877,6 +2877,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20922|Villas Gernika|Fraccionamiento|Jesús María|Aguascalientes|Jesús María |20921|01|20921||21|005|0092|Urbano|04
 20922|El Calvario|Colonia|Jesús María|Aguascalientes|Jesús María |20921|01|20921||09|005|0892|Urbano|04
 20922|La Escalera|Colonia|Jesús María|Aguascalientes|Jesús María |20921|01|20921||09|005|0893|Urbano|04
+20923|Residencial Jesús María|Fraccionamiento|Jesús María|Aguascalientes|Jesús María |20921|01|20921||21|005|1363|Urbano|04
 20923|Rinconada Jesús María|Fraccionamiento|Jesús María|Aguascalientes|Jesús María |20921|01|20921||21|005|0004|Urbano|04
 20923|Real Campestre|Fraccionamiento|Jesús María|Aguascalientes|Jesús María |20921|01|20921||21|005|0008|Urbano|04
 20923|La Villa Residencial|Fraccionamiento|Jesús María|Aguascalientes|Jesús María |20921|01|20921||21|005|0009|Urbano|04
@@ -2889,7 +2890,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 20923|San Miguelito|Colonia|Jesús María|Aguascalientes|Jesús María |20921|01|20921||09|005|0899|Urbano|04
 20923|Rinconada San Miguelito|Fraccionamiento|Jesús María|Aguascalientes|Jesús María |20921|01|20921||21|005|0903|Urbano|04
 20923|Ruiseñores|Condominio|Jesús María|Aguascalientes|Jesús María |20921|01|20921||10|005|1327|Urbano|04
-20923|Residencial Jesús María|Fraccionamiento|Jesús María|Aguascalientes|Jesús María |20921|01|20921||21|005|1363|Urbano|04
 20924|Cielo Claro|Colonia|Jesús María|Aguascalientes|Jesús María |20921|01|20921||09|005|0024|Urbano|04
 20924|Agua Clara|Fraccionamiento|Jesús María|Aguascalientes|Jesús María |20921|01|20921||21|005|0900|Urbano|04
 20924|Jacarandas|Fraccionamiento|Jesús María|Aguascalientes|Jesús María |20921|01|20921||21|005|0901|Urbano|04
@@ -3022,9 +3022,9 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 21070|Zacatecas|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0023|Urbano|02
 21079|Los Arcos|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0024|Urbano|02
 21080|El Vidrio|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0025|Urbano|02
-21090|Agualeguas|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|1661|Urbano|02
 21090|Del Rastro|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0027|Urbano|02
 21090|Ejido Zacatecas|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0028|Urbano|02
+21090|Agualeguas|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|1661|Urbano|02
 21100|Nueva|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0029|Urbano|02
 21100|Primera Sección|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0030|Urbano|02
 21100|Segunda Sección|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0031|Urbano|02
@@ -3435,13 +3435,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 21378|Sombras Jery|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|2412|Urbano|02
 21378|La Toscana Residencial|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2620|Urbano|02
 21378|Nuevo Amanecer|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|2801|Urbano|02
-21379|Los Prados|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0003|Urbano|02
-21379|Residencial Quinta del Centro|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0125|Urbano|02
-21379|La Bodega ISSSTE|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0179|Urbano|02
-21379|Rancho La Bodega|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0180|Urbano|02
-21379|Real del Castillo|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0181|Urbano|02
-21379|Vista del Llano|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0182|Urbano|02
-21379|Santa Lucia|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0509|Urbano|02
 21379|Valle Delicias|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0515|Urbano|02
 21379|Villa Bonita|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0518|Urbano|02
 21379|Ziba|Condominio|Mexicali|Baja California|Mexicali|21101|02|21101||10|002|0554|Urbano|02
@@ -3464,6 +3457,13 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 21379|Residencial Ibiza|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2654|Urbano|02
 21379|La Antigua|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2657|Urbano|02
 21379|Hacienda Málaga|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2719|Urbano|02
+21379|Los Prados|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0003|Urbano|02
+21379|Residencial Quinta del Centro|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0125|Urbano|02
+21379|La Bodega ISSSTE|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0179|Urbano|02
+21379|Rancho La Bodega|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0180|Urbano|02
+21379|Real del Castillo|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0181|Urbano|02
+21379|Vista del Llano|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0182|Urbano|02
+21379|Santa Lucia|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0509|Urbano|02
 21380|Justo Sierra|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0183|Urbano|02
 21380|Xochimilco|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0185|Urbano|02
 21383|Dos División Dos|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0198|Urbano|02
@@ -3495,6 +3495,12 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 21386|Granjas Santa Cecilia|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|1782|Urbano|02
 21386|Granjas Valle Verde (Colorado Número Uno)|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|1783|Urbano|02
 21386|El Dorado|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2454|Urbano|02
+21387|La Ventana Residencial|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0241|Urbano|02
+21387|Caminos del Sol|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0246|Urbano|02
+21387|Club Campestre de Mexicali - Golf|Equipamiento|Mexicali|Baja California|Mexicali|21101|02|21101||17|002|0539|Urbano|02
+21387|Foresta Residencial|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0589|Urbano|02
+21387|Gran Foresta Residencial|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0592|Urbano|02
+21387|Pórticos del Valle|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|1785|Urbano|02
 21387|Los Naranjos|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|1786|Urbano|02
 21387|Jardines de Calafia|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|1787|Urbano|02
 21387|Solidaridad Social|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|1788|Urbano|02
@@ -3510,12 +3516,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 21387|Misión del Ángel|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2269|Urbano|02
 21387|Lago del Sol Residencial|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2451|Urbano|02
 21387|Camino del Sur|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2757|Urbano|02
-21387|La Ventana Residencial|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0241|Urbano|02
-21387|Caminos del Sol|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0246|Urbano|02
-21387|Club Campestre de Mexicali - Golf|Equipamiento|Mexicali|Baja California|Mexicali|21101|02|21101||17|002|0539|Urbano|02
-21387|Foresta Residencial|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0589|Urbano|02
-21387|Gran Foresta Residencial|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0592|Urbano|02
-21387|Pórticos del Valle|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|1785|Urbano|02
 21389|Hidalgo|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0194|Urbano|02
 21389|Villa Mediterránea|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0233|Urbano|02
 21389|Privada Marbella|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|0234|Urbano|02
@@ -3601,6 +3601,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 21397|Pimsa II|Zona industrial|Mexicali|Baja California|Mexicali|21101|02|21101||37|002|1807|Urbano|02
 21398|González Ortega Poniente 1|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0217|Urbano|02
 21398|Raza|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0218|Urbano|02
+21399|La Enramada|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2830|Urbano|02
 21399|Elizaura|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0219|Urbano|02
 21399|Eucaliptos|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0220|Urbano|02
 21399|González Ortega Poniente 2|Colonia|Mexicali|Baja California|Mexicali|21101|02|21101||09|002|0221|Urbano|02
@@ -3620,7 +3621,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 21399|Hacienda del Río|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2413|Urbano|02
 21399|San Esteban|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2652|Urbano|02
 21399|Centro Comercial Nuevo Mexicali|Zona comercial|Mexicali|Baja California|Mexicali|21101|02|21101||33|002|2803|Urbano|02
-21399|La Enramada|Fraccionamiento|Mexicali|Baja California|Mexicali|21101|02|21101||21|002|2830|Urbano|02
 21400|Tecate Centro|Colonia|Tecate|Baja California|Tecate|21401|02|21401||09|003|0230|Urbano|03
 21410|Espinoza|Colonia|Tecate|Baja California|Tecate|21401|02|21401||09|003|0232|Urbano|03
 21410|Prohogar|Colonia|Tecate|Baja California|Tecate|21401|02|21401||09|003|0233|Urbano|03
@@ -4208,11 +4208,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 22117|Guanajuato|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|0971|Urbano|04
 22117|Anexa Santa Fe|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|2810|Urbano|04
 22117|Lomas Las Huertas|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|2811|Urbano|04
-22120|Arboledas de La Mesa|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|0999|Urbano|04
-22120|Constitución del 17|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1000|Urbano|04
-22120|18 de Marzo|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1001|Urbano|04
-22120|La Ciénega|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1004|Urbano|04
-22120|Zermeño (Mérida)|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1008|Urbano|04
 22120|Niños Héroes (La Mesa)|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1011|Urbano|04
 22120|Arboledas|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1391|Urbano|04
 22120|La Ciénega Sur|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1392|Urbano|04
@@ -4220,6 +4215,11 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 22120|Vivienda Magisterial 37|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1395|Urbano|04
 22120|Los Pinos (Limón)|Zona industrial|Tijuana|Baja California|Tijuana|22101|02|22101||37|004|1841|Urbano|04
 22120|División del Norte|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|2781|Urbano|04
+22120|Arboledas de La Mesa|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|0999|Urbano|04
+22120|Constitución del 17|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1000|Urbano|04
+22120|18 de Marzo|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1001|Urbano|04
+22120|La Ciénega|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1004|Urbano|04
+22120|Zermeño (Mérida)|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1008|Urbano|04
 22123|Arboledas|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|0094|Urbano|04
 22123|García|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|1022|Urbano|04
 22123|Los Venados|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|1049|Urbano|04
@@ -4268,13 +4268,13 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 22163|Hacienda los Venados|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|2741|Urbano|04
 22164|Palma Real|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|0007|Urbano|04
 22164|Los Valles|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|2648|Urbano|04
+22165|Zona Cerril General|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|0082|Urbano|04
+22165|Natura Sección Montes|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|0101|Urbano|04
+22165|Natura Sección Bosques|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|2813|Urbano|04
 22165|Natura Sección Arboledas|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|0014|Urbano|04
 22165|Natura Sección Vistas del Sol|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|0017|Urbano|04
 22165|Hacienda las Delicias III|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|0023|Urbano|04
 22165|Natura Sección Amanecer|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|0027|Urbano|04
-22165|Zona Cerril General|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|0082|Urbano|04
-22165|Natura Sección Montes|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|0101|Urbano|04
-22165|Natura Sección Bosques|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|2813|Urbano|04
 22170|Rancho Santa Cruz|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|0002|Urbano|04
 22170|Hacienda los Laureles|Fraccionamiento|Tijuana|Baja California|Tijuana|22101|02|22101||21|004|0012|Urbano|04
 22170|Santa Cruz|Colonia|Tijuana|Baja California|Tijuana|22101|02|22101||09|004|0067|Urbano|04
@@ -4824,9 +4824,9 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 22625|Obrera 1ra. Sección|Colonia|Tijuana|Baja California|Tijuana|22001|02|22001||09|004|0617|Urbano|04
 22626|El Rubí|Fraccionamiento|Tijuana|Baja California|Tijuana|22001|02|22001||21|004|1816|Urbano|04
 22626|Rubí Aguadores|Fraccionamiento|Tijuana|Baja California|Tijuana|22001|02|22001||21|004|2235|Urbano|04
-22630|Valle del Rubí Sección Lomas|Colonia|Tijuana|Baja California|Tijuana|22001|02|22001||09|004|0619|Urbano|04
 22630|Vivienda Popular|Colonia|Tijuana|Baja California|Tijuana|22001|02|22001||09|004|0637|Urbano|04
 22630|Cumbres del Sol|Fraccionamiento|Tijuana|Baja California|Tijuana|22001|02|22001||21|004|2198|Urbano|04
+22630|Valle del Rubí Sección Lomas|Colonia|Tijuana|Baja California|Tijuana|22001|02|22001||09|004|0619|Urbano|04
 22634|La Sierra|Colonia|Tijuana|Baja California|Tijuana|22001|02|22001||09|004|0613|Urbano|04
 22634|Liberal Lomas del Rubí|Fraccionamiento|Tijuana|Baja California|Tijuana|22001|02|22001||21|004|0640|Urbano|04
 22634|Residencial Las Cascadas|Colonia|Tijuana|Baja California|Tijuana|22001|02|22001||09|004|1515|Urbano|04
@@ -43943,6 +43943,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 37207|Bosques de la Selva|Colonia|León|Guanajuato|León de los Aldama|37001|11|37001||09|020|0278|Urbano|07
 37207|San Nicolás de los Reyes|Colonia|León|Guanajuato|León de los Aldama|37001|11|37001||09|020|0336|Urbano|07
 37207|La Escondida|Colonia|León|Guanajuato|León de los Aldama|37001|11|37001||09|020|0356|Urbano|07
+37207|Alta Sierra|Fraccionamiento|León|Guanajuato|León de los Aldama|37001|11|37001||21|020|0374|Urbano|07
 37207|El Vivero|Equipamiento|León|Guanajuato|León de los Aldama|37001|11|37001||17|020|1107|Urbano|07
 37207|El Penitente|Colonia|León|Guanajuato|León de los Aldama|37001|11|37001||09|020|1195|Urbano|07
 37207|El Valladito|Colonia|León|Guanajuato|León de los Aldama|37001|11|37001||09|020|1196|Urbano|07
@@ -50329,6 +50330,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 39086|Haciendita II|Colonia|Chilpancingo de los Bravo|Guerrero|Chilpancingo de los Bravo|39001|12|39001||09|029|0158|Urbano|02
 39086|La Cima|Colonia|Chilpancingo de los Bravo|Guerrero|Chilpancingo de los Bravo|39001|12|39001||09|029|0159|Urbano|02
 39086|Tribuna Nacional|Colonia|Chilpancingo de los Bravo|Guerrero|Chilpancingo de los Bravo|39001|12|39001||09|029|0161|Urbano|02
+39086|SUSPEG Secciones B, C y D|Colonia|Chilpancingo de los Bravo|Guerrero|Chilpancingo de los Bravo|39001|12|39001||09|029|0277|Urbano|02
 39086|Los Manantiales|Colonia|Chilpancingo de los Bravo|Guerrero|Chilpancingo de los Bravo|39001|12|39001||09|029|4140|Urbano|02
 39086|Riviera|Fraccionamiento|Chilpancingo de los Bravo|Guerrero|Chilpancingo de los Bravo|39001|12|39001||21|029|4141|Urbano|02
 39086|Los Girasoles|Fraccionamiento|Chilpancingo de los Bravo|Guerrero|Chilpancingo de los Bravo|39001|12|39001||21|029|4142|Urbano|02
@@ -58860,7 +58862,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43090|Tenexaco|Barrio|Xochiatipan|Hidalgo||43007|13|43007||02|078|6190|Urbano|
 43090|Arriba|Barrio|Xochiatipan|Hidalgo||43007|13|43007||02|078|6191|Urbano|
 43090|Tlamaya|Barrio|Xochiatipan|Hidalgo||43007|13|43007||02|078|6192|Urbano|
-43091|Tonalixco|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|6173|Rural|
 43092|Nanayatla|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|1280|Rural|
 43092|Atlalco|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|1281|Rural|
 43092|Acanoa|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|6182|Rural|
@@ -58882,6 +58883,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43096|Tlaltecatla|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|1278|Rural|
 43096|Cruzhica|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|1283|Rural|
 43096|Amolo|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|6169|Rural|
+43096|Tonalixco|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|6173|Rural|
 43096|San Miguel|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|6174|Rural|
 43096|Xochititla|Ranchería|Xochiatipan|Hidalgo||43007|13|43007||29|078|6176|Rural|
 43097|Ixtaczoquico|Pueblo|Xochiatipan|Hidalgo||43007|13|43007||28|078|1272|Rural|
@@ -59091,6 +59093,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43150|Nuevo|Barrio|Tlanchinol|Hidalgo||43007|13|43007||02|073|3153|Urbano|
 43150|Santa Cecilia|Barrio|Tlanchinol|Hidalgo||43007|13|43007||02|073|3154|Urbano|
 43150|Santa Cruz|Barrio|Tlanchinol|Hidalgo||43007|13|43007||02|073|3155|Urbano|
+43150|La Montaña|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3173|Rural|
 43151|Acahuasco|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1353|Urbano|
 43151|Chichatla|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1354|Rural|
 43153|Olotla|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1356|Rural|
@@ -59107,10 +59110,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43156|Chachala|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1360|Rural|
 43156|Ixtlapala|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1361|Rural|
 43156|Quetzaltzongo|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1363|Rural|
-43156|Quimixtla (Xitlama)|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1364|Rural|
-43156|Xitlama|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1365|Rural|
 43156|Atoscalao|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3157|Rural|
-43156|Cuatlapech|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3167|Rural|
 43156|El Mirador (Casetas)|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3171|Rural|
 43156|Las Puentes|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3177|Rural|
 43157|Peyula|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1366|Rural|
@@ -59120,11 +59120,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43159|Coamapil|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1368|Rural|
 43159|Chichiltépec|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1369|Rural|
 43159|Tianguis|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1370|Rural|
-43159|Cececapa|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3160|Rural|
-43159|Copaltitla|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3165|Rural|
-43159|El Balcón|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3170|Rural|
-43159|El Suspiro|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3172|Rural|
-43159|Tolapa|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3195|Rural|
 43160|Cuatlimax|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1371|Rural|
 43160|Hueyapa|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1372|Rural|
 43160|Jalpa|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1373|Rural|
@@ -59134,10 +59129,17 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43160|Cuatlapextla|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3168|Rural|
 43160|Quimixtla Hula|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3181|Rural|
 43160|Santa Martha Ula|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3184|Rural|
+43160|Xala|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3196|Rural|
 43161|Acatipa|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1375|Rural|
 43161|Chalchocotipa|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1376|Rural|
 43161|San José|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1377|Rural|
+43161|Cececapa|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3160|Rural|
+43161|Copaltitla|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3165|Rural|
+43161|El Balcón|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3170|Rural|
+43161|El Suspiro|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3172|Rural|
+43161|La Quebradora|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3176|Rural|
 43161|Nuevo|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3182|Rural|
+43161|Tolapa|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3195|Rural|
 43162|Huitepec|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1380|Rural|
 43162|Amoxco|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3156|Rural|
 43162|Cuatahuatla|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3166|Rural|
@@ -59145,15 +59147,16 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43162|Tamazolapa|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3185|Rural|
 43162|Tenexco|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3189|Rural|
 43163|Santa María Catzotipan (Santa María Tepetzintla)|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1381|Rural|
-43163|La Montaña|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3173|Rural|
-43163|La Quebradora|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3176|Rural|
 43164|Cuatatlán|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1382|Rural|
 43164|San Salvador|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1383|Rural|
 43164|Cerro Alto|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3161|Rural|
 43164|Tepeyac|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3190|Rural|
 43164|Tierra Colorada|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3191|Rural|
+43165|Quimixtla (Xitlama)|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1364|Rural|
+43165|Xitlama|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|1365|Rural|
 43165|Lontla|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1384|Rural|
 43165|Tlahuelompa|Barrio|Tlanchinol|Hidalgo||43007|13|43007||02|073|1385|Rural|
+43165|Cuatlapech|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3167|Rural|
 43165|La Pimienta|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3174|Rural|
 43165|La Providencia|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3175|Rural|
 43165|Moyotla|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3179|Rural|
@@ -59162,7 +59165,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43165|Tecruz|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3187|Rural|
 43165|Tenexatl|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3188|Rural|
 43165|Tlazolapa|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3193|Rural|
-43165|Xala|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3196|Rural|
 43165|Xaltipa|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3197|Rural|
 43167|Hidalgo|Pueblo|Tlanchinol|Hidalgo||43007|13|43007||28|073|1386|Rural|
 43167|Ehuatitla|Ranchería|Tlanchinol|Hidalgo||43007|13|43007||29|073|3169|Rural|
@@ -61215,20 +61217,25 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43875|La Gloria Escondida (Rancho de la Cruz)|Ranchería|Tolcayuca|Hidalgo||43801|13|43801||29|075|2975|Rural|
 43875|Lomas de San Miguel|Ranchería|Tolcayuca|Hidalgo||43801|13|43801||29|075|2978|Rural|
 43875|María Guadalupe Figueroa Gutiérrez|Ranchería|Tolcayuca|Hidalgo||43801|13|43801||29|075|2979|Rural|
+43880|Forjadores|Fraccionamiento|Villa de Tezontepec|Hidalgo||43801|13|43801||21|066|0002|Urbano|
+43880|Rancho Nevado|Fraccionamiento|Villa de Tezontepec|Hidalgo||43801|13|43801||21|066|0003|Urbano|
+43880|Los Amores de Don Juan|Fraccionamiento|Villa de Tezontepec|Hidalgo||43801|13|43801||21|066|0005|Urbano|
+43880|El Cortijo|Fraccionamiento|Villa de Tezontepec|Hidalgo||43801|13|43801||21|066|0006|Urbano|
 43880|Villa de Tezontepec Centro|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|1943|Urbano|
+43880|Calvario|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3199|Urbano|
+43880|Estación|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3200|Urbano|
+43880|La Virgen|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3203|Urbano|
 43882|Morelos|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|1944|Urbano|
+43883|Villa Antigua|Fraccionamiento|Villa de Tezontepec|Hidalgo||43801|13|43801||21|066|0007|Urbano|
 43883|San Juan|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3204|Urbano|
 43883|Las Peñitas|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3205|Urbano|
-43884|Estación|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3200|Urbano|
 43884|Nueva|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3201|Urbano|
 43884|Valencia|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3202|Urbano|
-43885|Calvario|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3199|Urbano|
-43885|La Virgen|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3203|Urbano|
 43890|Benito Juárez|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|1945|Urbano|
+43890|La Loma|Ranchería|Villa de Tezontepec|Hidalgo||43801|13|43801||29|066|3211|Rural|
 43893|La Cantera|Pueblo|Villa de Tezontepec|Hidalgo||43801|13|43801||28|066|2858|Urbano|
 43893|El Tejocote|Pueblo|Villa de Tezontepec|Hidalgo||43801|13|43801||28|066|3210|Urbano|
 43894|PLATAH Plataforma Logística del Estado de Hidalgo|Zona industrial|Villa de Tezontepec|Hidalgo||43801|13|43801||37|066|0001|Urbano|
-43894|La Loma|Ranchería|Villa de Tezontepec|Hidalgo||43801|13|43801||29|066|3211|Rural|
 43895|Ampliación San Juanita|Ranchería|Villa de Tezontepec|Hidalgo||43801|13|43801||29|066|3207|Rural|
 43895|Chamberluco|Colonia|Villa de Tezontepec|Hidalgo||43801|13|43801||09|066|3208|Urbano|
 43895|El Capulín|Pueblo|Villa de Tezontepec|Hidalgo||43801|13|43801||28|066|3209|Urbano|
@@ -61451,6 +61458,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43960|PRI Revolución|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|0002|Urbano|
 43960|Rafael Franco|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|0003|Urbano|
 43960|Santa Cecilia|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|0004|Urbano|
+43960|Santos Lugares|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|0005|Urbano|
 43960|Emiliano Zapata Centro|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|1988|Urbano|
 43960|Ex-hacienda San Lorenzo|Ranchería|Emiliano Zapata|Hidalgo||43992|13|43992||29|021|1990|Rural|
 43960|Ramos Millán|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|3849|Urbano|
@@ -61463,13 +61471,13 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 43961|Santa Clara|Exhacienda|Emiliano Zapata|Hidalgo||43992|13|43992||18|021|3857|Rural|
 43961|José María Morelos (San José)|Pueblo|Emiliano Zapata|Hidalgo||43992|13|43992||28|021|3858|Urbano|
 43961|La Palma|Ranchería|Emiliano Zapata|Hidalgo||43992|13|43992||29|021|3859|Rural|
-43963|Jardines|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|3850|Urbano|
-43964|Chamizal|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|3853|Urbano|
+43964|Ampliación Venustiano Carranza|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|0006|Urbano|
+43964|San Gabriel|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|0007|Urbano|
 43964|Loma Bonita|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|3854|Urbano|
 43964|Ampliación Loma Bonita|Colonia|Emiliano Zapata|Hidalgo||43992|13|43992||09|021|3855|Urbano|
+43965|Tortolitas|Ranchería|Emiliano Zapata|Hidalgo||43992|13|43992||29|021|3862|Rural|
 43966|El Durazno|Ranchería|Emiliano Zapata|Hidalgo||43992|13|43992||29|021|3856|Rural|
 43966|Santa Cruz|Ranchería|Emiliano Zapata|Hidalgo||43992|13|43992||29|021|3861|Rural|
-43966|Tortolitas|Ranchería|Emiliano Zapata|Hidalgo||43992|13|43992||29|021|3862|Rural|
 43970|Tepeapulco Centro|Colonia|Tepeapulco|Hidalgo|Tepeapulco|43992|13|43992||09|061|1994|Urbano|15
 43973|Constitución de 1917|Colonia|Tepeapulco|Hidalgo|Tepeapulco|43992|13|43992||09|061|0920|Urbano|15
 43973|18 de Marzo|Colonia|Tepeapulco|Hidalgo|Tepeapulco|43992|13|43992||09|061|1998|Urbano|15
@@ -71072,10 +71080,8 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 52040|El Tiradero|Colonia|Lerma|México||52001|15|52001||09|051|0006|Rural|
 52040|San Miguel Ameyalco|Pueblo|Lerma|México||52001|15|52001||28|051|1586|Urbano|
 52040|La Montoya|Ranchería|Lerma|México||52001|15|52001||29|051|6610|Rural|
-52040|La Joya|Colonia|Lerma|México||52001|15|52001||09|051|8635|Rural|
 52040|Ojo de Agua|Colonia|Lerma|México||52001|15|52001||09|051|8637|Rural|
 52040|Cristo Rey|Colonia|Lerma|México||52001|15|52001||09|051|8638|Rural|
-52040|San Miguel Ameyalco|Ejido|Lerma|México||52001|15|52001||15|051|8641|Rural|
 52043|Santiago Analco|Pueblo|Lerma|México||52001|15|52001||28|051|7390|Urbano|
 52044|Ejido de San Mateo Atarasquillo|Colonia|Lerma|México||52001|15|52001||09|051|0013|Rural|
 52044|San Mateo Atarasquillo|Pueblo|Lerma|México||52001|15|52001||28|051|1594|Urbano|
@@ -71749,6 +71755,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 52477|Emiliano Zapata|Ranchería|Malinalco|México||52441|15|52441||29|052|7442|Rural|
 52480|El Cerrito (El Calvario)|Ranchería|Ocuilan|México||52441|15|52441||29|063|0001|Rural|
 52480|Ocuilán de Arteaga|Pueblo|Ocuilan|México||52441|15|52441||28|063|1971|Urbano|
+52480|El Puente|Ranchería|Ocuilan|México||52441|15|52441||29|063|6764|Rural|
 52480|Santa María (Tlacutapa)|Ranchería|Ocuilan|México||52441|15|52441||29|063|6770|Rural|
 52480|San Sebastían|Pueblo|Ocuilan|México||52441|15|52441||28|063|7523|Urbano|
 52483|La Cañada|Pueblo|Ocuilan|México||52441|15|52441||28|063|1979|Rural|
@@ -71774,7 +71781,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 52493|Mexicapa|Ranchería|Ocuilan|México||52441|15|52441||29|063|7519|Rural|
 52493|Tlatempa|Ranchería|Ocuilan|México||52441|15|52441||29|063|7524|Rural|
 52494|Pastoría (La Pastora)|Pueblo|Ocuilan|México||52441|15|52441||28|063|1989|Rural|
-52494|El Puente|Ranchería|Ocuilan|México||52441|15|52441||29|063|6764|Rural|
 52494|Santa Ana|Ranchería|Ocuilan|México||52441|15|52441||29|063|6769|Rural|
 52494|Tepetzingo (Tepezingo)|Ranchería|Ocuilan|México||52441|15|52441||29|063|6772|Rural|
 52494|Las Trojes|Ranchería|Ocuilan|México||52441|15|52441||29|063|7518|Rural|
@@ -71897,6 +71903,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 52740|Santa María|Barrio|Ocoyoacac|México|Ocoyoacac|52741|15|52741||02|062|5162|Urbano|40
 52740|San Miguel|Barrio|Ocoyoacac|México|Ocoyoacac|52741|15|52741||02|062|5163|Urbano|40
 52740|Coapanoaya|Barrio|Ocoyoacac|México|Ocoyoacac|52741|15|52741||02|062|8228|Urbano|40
+52740|El Bellotal|Colonia|Ocoyoacac|México||52741|15|52741||09|062|8581|Urbano|
 52740|Ejido la Campana|Colonia|Ocoyoacac|México|Ocoyoacac|52741|15|52741||09|062|8583|Urbano|40
 52743|Bosque de los Encinos|Fraccionamiento|Ocoyoacac|México||52741|15|52741||21|062|0002|Rural|
 52743|Hacienda San Martín|Fraccionamiento|Ocoyoacac|México||52741|15|52741||21|062|0003|Rural|
@@ -71908,7 +71915,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 52743|Ex-hacienda Jajalpa|Fraccionamiento|Ocoyoacac|México||52741|15|52741||21|062|8249|Rural|
 52743|San Miguel (Posito del Olvido)|Barrio|Ocoyoacac|México||52741|15|52741||02|062|8579|Urbano|
 52743|Cañada Honda|Ranchería|Ocoyoacac|México||52741|15|52741||29|062|8580|Rural|
-52743|El Bellotal|Colonia|Ocoyoacac|México||52741|15|52741||09|062|8581|Urbano|
 52743|El Peñón|Ranchería|Ocoyoacac|México||52741|15|52741||29|062|8584|Rural|
 52743|El Portezuelo|Ranchería|Ocoyoacac|México||52741|15|52741||29|062|8585|Rural|
 52743|El Zarco (Las Truchas)|Ranchería|Ocoyoacac|México||52741|15|52741||29|062|8586|Rural|
@@ -71927,7 +71933,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 52755|Benevento|Fraccionamiento|Ocoyoacac|México||52741|15|52741||21|062|0004|Rural|
 52755|Santiaguito|Barrio|Ocoyoacac|México||52741|15|52741||02|062|5160|Urbano|
 52755|Tepexoyuca|Barrio|Ocoyoacac|México||52741|15|52741||02|062|5276|Urbano|
-52755|El Llano del Compromiso|Colonia|Ocoyoacac|México||52741|15|52741||09|062|7106|Rural|
 52756|El Pedregal de Guadalupe Hidalgo|Pueblo|Ocoyoacac|México||52741|15|52741||28|062|2033|Urbano|
 52756|El Pirame|Colonia|Ocoyoacac|México||52741|15|52741||09|062|6704|Rural|
 52756|Guadalupe Victoria|Colonia|Ocoyoacac|México||52741|15|52741||09|062|6705|Rural|
@@ -71936,6 +71941,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 52757|San Antonio el Llanito|Pueblo|Ocoyoacac|México||52741|15|52741||28|062|2026|Rural|
 52757|San Pedro Cholula|Pueblo|Ocoyoacac|México||52741|15|52741||28|062|2034|Urbano|
 52757|Estación Maclovio Herrera|Zona industrial|Ocoyoacac|México||52741|15|52741||37|062|5508|Urbano|
+52757|El Llano del Compromiso|Colonia|Ocoyoacac|México||52741|15|52741||09|062|7106|Rural|
 52760|El Cerrito|Ranchería|Huixquilucan|México|Huixquilucan de Degollado|52761|15|52761||29|037|2037|Rural|06
 52760|Huixquilucan de Degollado Centro|Colonia|Huixquilucan|México|Huixquilucan de Degollado|52761|15|52761||09|037|2038|Urbano|06
 52760|San Ramón|Barrio|Huixquilucan|México|Huixquilucan de Degollado|52761|15|52761||02|037|2051|Rural|06
@@ -74999,6 +75005,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 55924|Centro de Readaptación Social Otumba|Equipamiento|Otumba|México||55901|15|55901||17|065|9589|Rural|
 55925|San Francisco Tlaltica|Pueblo|Otumba|México||55901|15|55901||28|065|4021|Rural|
 55925|Oxtotipac|Pueblo|Otumba|México||55901|15|55901||28|065|4023|Urbano|
+55925|La Zumbona|Ranchería|Otumba|México||55901|15|55901||29|065|9223|Rural|
 55926|Cuautlatcingo|Pueblo|Otumba|México||55901|15|55901||28|065|4029|Urbano|
 55926|Rancho el Mayorazgo|Ranchería|Otumba|México||55901|15|55901||29|065|7582|Rural|
 55926|Nueva Colonia de Axalco|Colonia|Otumba|México||55901|15|55901||09|065|9214|Rural|
@@ -75006,7 +75013,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 55926|El Potrero|Ejido|Otumba|México||55901|15|55901||15|065|9590|Rural|
 55927|Belém|Pueblo|Otumba|México||55901|15|55901||28|065|4019|Rural|
 55927|Altica|Ranchería|Otumba|México||55901|15|55901||29|065|7571|Rural|
-55927|La Zumbona|Ranchería|Otumba|México||55901|15|55901||29|065|9223|Rural|
 55927|Tecalco|Ranchería|Otumba|México||55901|15|55901||29|065|9224|Rural|
 55927|ZR|Ranchería|Otumba|México||55901|15|55901||29|065|9225|Rural|
 55930|San Martín Ahuatepec|Pueblo|Otumba|México||55901|15|55901||28|065|4030|Rural|
@@ -88410,13 +88416,13 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 62934|Leandro Valle|Colonia|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||09|013|1631|Urbano|
 62936|Santa Cruz|Colonia|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||09|013|1622|Rural|
 62936|El Puente Angosto (Rancho el Pitayo)|Rancho|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||48|013|1623|Rural|
-62936|El Abrevadero (Campo Mata Redonda)|Ranchería|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||29|013|1628|Rural|
 62937|Amacuitlapilco|Pueblo|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||28|013|0606|Rural|
 62937|Tlayca|Pueblo|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||28|013|0609|Rural|
 62937|Emiliano Zapata|Colonia|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||09|013|1626|Rural|
 62937|Juárez|Colonia|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||09|013|1627|Rural|
 62940|Tetelilla|Pueblo|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||28|013|0610|Urbano|
 62943|El Puente Colorado|Colonia|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||09|013|1629|Rural|
+62944|El Abrevadero (Campo Mata Redonda)|Ranchería|Jonacatepec de Leandro Valle|Morelos||62931|17|62931||29|013|1628|Rural|
 62950|Axochiapan|Pueblo|Axochiapan|Morelos||62951|17|62951||28|003|0612|Urbano|
 62950|La Luz|Colonia|Axochiapan|Morelos||62951|17|62951||09|003|0923|Urbano|
 62950|Otilio Montaño|Colonia|Axochiapan|Morelos||62951|17|62951||09|003|1470|Urbano|
@@ -103600,7 +103606,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 72370|Agrícola Resurgimiento|Colonia|Puebla|Puebla|Heroica Puebla de Zaragoza|72261|21|72261||09|114|0237|Urbano|03
 72370|El Centenario|Condominio|Puebla|Puebla|Heroica Puebla de Zaragoza|72261|21|72261||10|114|0455|Urbano|03
 72370|Cosmos|Condominio|Puebla|Puebla|Heroica Puebla de Zaragoza|72261|21|72261||10|114|0456|Urbano|03
-72373|Resurgimiento CD. Norte|Colonia|Puebla|Puebla|Heroica Puebla de Zaragoza|72261|21|72261||09|114|6264|Urbano|03
+72373|Resurgimiento Ciudad Norte|Colonia|Puebla|Puebla|Heroica Puebla de Zaragoza|72261|21|72261||09|114|6264|Urbano|03
 72377|Los Remedios|Colonia|Puebla|Puebla|Heroica Puebla de Zaragoza|72261|21|72261||09|114|0238|Urbano|03
 72377|Acocota|Colonia|Puebla|Puebla|Heroica Puebla de Zaragoza|72261|21|72261||09|114|2774|Urbano|03
 72377|La Luz|Barrio|Puebla|Puebla|Heroica Puebla de Zaragoza|72261|21|72261||02|114|3158|Urbano|03
@@ -106295,6 +106301,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 73680|Zacapoaxtla Centro|Colonia|Zacapoaxtla|Puebla||73682|21|73682||09|207|1199|Rural|
 73680|Comaltepec|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|1208|Rural|
 73680|La Ermita|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|7732|Rural|
+73680|La Cañada|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|7733|Rural|
 73680|Los Cristales (Talican)|Colonia|Zacapoaxtla|Puebla||73682|21|73682||09|207|7754|Rural|
 73680|Texpilco|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|7755|Rural|
 73680|La Cortadura|Colonia|Zacapoaxtla|Puebla||73682|21|73682||09|207|7757|Rural|
@@ -106305,7 +106312,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 73684|Cohuatzalpan|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|7744|Rural|
 73685|Nexpanateno|Colonia|Zacapoaxtla|Puebla||73682|21|73682||09|207|1204|Rural|
 73685|Ahuatepec|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|7728|Rural|
-73685|La Cañada|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|7733|Rural|
 73685|San Carlos|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|7736|Rural|
 73685|Apulco|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|7743|Rural|
 73685|San Francisco Zacapexpan|Barrio|Zacapoaxtla|Puebla||73682|21|73682||02|207|7748|Rural|
@@ -111345,6 +111351,9 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 76500|La Fuente|Colonia|Cadereyta de Montes|Querétaro||76511|22|76511||09|004|1037|Urbano|
 76500|El Paraíso|Colonia|Cadereyta de Montes|Querétaro||76511|22|76511||09|004|1042|Urbano|
 76503|Los Llanitos|Colonia|Cadereyta de Montes|Querétaro||76511|22|76511||09|004|1041|Urbano|
+76503|Llano Blanco|Colonia|Cadereyta de Montes|Querétaro||76511|22|76511||09|004|1496|Urbano|
+76503|La Luz|Rancho|Cadereyta de Montes|Querétaro||76511|22|76511||48|004|2985|Rural|
+76503|Hacienda San Antonio|Rancho|Cadereyta de Montes|Querétaro||76511|22|76511||48|004|2986|Rural|
 76504|Fuentes y Pueblo Nuevo|Colonia|Cadereyta de Montes|Querétaro||76511|22|76511||09|004|1343|Urbano|
 76504|La Meseta|Colonia|Cadereyta de Montes|Querétaro||76511|22|76511||09|004|1497|Urbano|
 76505|La Magdalena|Colonia|Cadereyta de Montes|Querétaro||76511|22|76511||09|004|0481|Urbano|
@@ -111361,13 +111370,11 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 76510|La Mesa Providencia|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2873|Urbano|
 76510|Santo Domingo|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2930|Urbano|
 76513|Villa Guerrero|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0491|Urbano|
-76513|Llano Blanco|Colonia|Cadereyta de Montes|Querétaro||76511|22|76511||09|004|1496|Urbano|
 76513|Los Maqueda|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2177|Urbano|
 76513|El Ranchito|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2872|Rural|
 76513|Los Espinos|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2906|Rural|
 76513|Mintehé|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2939|Urbano|
 76513|El Organal|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2969|Rural|
-76513|La Luz|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2985|Rural|
 76513|El Magueyal|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2987|Rural|
 76514|Villa Nueva|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0495|Urbano|
 76515|Boxasní|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0492|Urbano|
@@ -111385,7 +111392,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 76516|Las Fuentes (La Peña)|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2960|Rural|
 76516|Bordo de Santo Niño|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2965|Rural|
 76516|San Antonio|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2983|Rural|
-76516|Hacienda San Antonio|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2986|Rural|
 76516|Los Barrones (La Concepción)|Barrio|Cadereyta de Montes|Querétaro||76511|22|76511||02|004|3007|Rural|
 76517|San Martín Florida|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0489|Urbano|
 76517|Llanitos de Santa Bárbara|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2874|Urbano|
@@ -111454,7 +111460,6 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 76529|Cerro Blanco Sección Dos|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2964|Rural|
 76530|San Javier|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0512|Urbano|
 76530|Los Amolitos|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2889|Urbano|
-76530|Agua de Chivo (Los Luna)|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2946|Rural|
 76534|Solares|Barrio|Cadereyta de Montes|Querétaro||76511|22|76511||02|004|0001|Rural|
 76534|La Esperanza|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0496|Urbano|
 76534|Maconí|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0511|Urbano|
@@ -111503,14 +111508,11 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 76536|De Santiago (Charco Frío)|Barrio|Cadereyta de Montes|Querétaro||76511|22|76511||02|004|2882|Urbano|
 76536|De Guadalupe (Charco Frío)|Barrio|Cadereyta de Montes|Querétaro||76511|22|76511||02|004|2886|Urbano|
 76536|Las Aguas|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2904|Rural|
+76536|Agua de Chivo (Los Luna)|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2946|Rural|
 76536|Mesa de San Ramón|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2948|Rural|
 76537|Puerto del Salitre|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0517|Urbano|
 76537|Carricillo|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2884|Urbano|
-76537|Nuevo Sombrerete|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2934|Rural|
-76537|Santa Mónica|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2947|Rural|
-76537|Los Tepetates|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2952|Rural|
 76537|El Puerto|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|3003|Rural|
-76537|Santa Inés|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|3023|Rural|
 76538|La Veracruz|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0519|Urbano|
 76538|Los Martínez|Barrio|Cadereyta de Montes|Querétaro||76511|22|76511||02|004|2190|Rural|
 76538|Los Lirios|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2512|Rural|
@@ -111532,23 +111534,25 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 76540|De las Cruces|Barrio|Cadereyta de Montes|Querétaro||76511|22|76511||02|004|2869|Urbano|
 76540|De los Sánchez|Barrio|Cadereyta de Montes|Querétaro||76511|22|76511||02|004|2870|Urbano|
 76540|Los Martínez|Barrio|Cadereyta de Montes|Querétaro||76511|22|76511||02|004|2871|Urbano|
+76540|Santa Mónica|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2947|Rural|
+76540|Los Tepetates|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2952|Rural|
 76543|Boyé|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0523|Urbano|
 76543|San Rafael Dethiga|Barrio|Cadereyta de Montes|Querétaro||76511|22|76511||02|004|0524|Urbano|
 76544|Cerro Prieto|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0522|Urbano|
 76544|San Antonio de la Cañada|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|1167|Urbano|
 76544|El Ranchito|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2201|Urbano|
 76544|Barranca del Sordo|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2899|Rural|
-76544|La Presa Vieja|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2944|Rural|
-76544|Valle el Solís|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2953|Rural|
+76544|Nuevo Sombrerete|Rancho|Cadereyta de Montes|Querétaro||76511|22|76511||48|004|2934|Rural|
 76544|Los Badillo|Colonia|Cadereyta de Montes|Querétaro||76511|22|76511||09|004|2966|Urbano|
 76545|Bella Vista del Río|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0527|Urbano|
 76545|El Yeso|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2982|Rural|
 76545|Las Cuevas|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2999|Rural|
-76545|El Chivo|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|3000|Rural|
+76545|Santa Inés|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|3023|Rural|
 76546|Mesa de León|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|1301|Urbano|
 76546|El Arbolito|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2898|Urbano|
 76546|El Plan|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2902|Rural|
 76546|La Lajita|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2996|Rural|
+76546|El Chivo|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|3000|Rural|
 76547|Tziquia|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|0530|Urbano|
 76547|El Charco|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2907|Rural|
 76547|Taxhidó|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2909|Rural|
@@ -111568,7 +111572,9 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 76548|Río Grande|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2903|Rural|
 76548|Boyecito|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2912|Urbano|
 76548|La Puerta|Pueblo|Cadereyta de Montes|Querétaro||76511|22|76511||28|004|2936|Urbano|
+76548|La Presa Vieja|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2944|Rural|
 76548|Yexthó Chico|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2950|Rural|
+76548|Valle el Solís|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2953|Rural|
 76548|El Charcón|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|2963|Rural|
 76548|Domuhí|Ranchería|Cadereyta de Montes|Querétaro||76511|22|76511||29|004|3019|Rural|
 76550|La Ladera|Colonia|San Joaquín|Querétaro||76511|22|76511||09|015|0002|Urbano|
@@ -123492,6 +123498,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 81845|San Lázaro|Ranchería|El Fuerte|Sinaloa||81821|25|81821||29|010|0950|Rural|
 81846|La Junta|Rancho|El Fuerte|Sinaloa||81821|25|81821||48|010|0003|Rural|
 81846|Potrero de los Soto|Ranchería|El Fuerte|Sinaloa||81821|25|81821||29|010|0026|Rural|
+81846|Cofradía|Rancho|El Fuerte|Sinaloa||81821|25|81821||48|010|0052|Rural|
 81847|Bacapaco|Ejido|El Fuerte|Sinaloa||81821|25|81821||15|010|2228|Rural|
 81850|Borabampo|Ejido|El Fuerte|Sinaloa||81821|25|81821||15|010|0010|Rural|
 81850|Boca de Arroyo|Ranchería|El Fuerte|Sinaloa||81821|25|81821||29|010|0951|Rural|
@@ -147494,6 +147501,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 94776|Capulines|Ranchería|Soledad Atzompa|Veracruz de Ignacio de la Llave||94731|30|94731||29|147|7973|Rural|
 94776|Las Porfiadas|Ranchería|Soledad Atzompa|Veracruz de Ignacio de la Llave||94731|30|94731||29|147|7974|Rural|
 94776|El Rincón|Ranchería|Soledad Atzompa|Veracruz de Ignacio de la Llave||94731|30|94731||29|147|7975|Rural|
+94777|El Paraíso|Colonia|Soledad Atzompa|Veracruz de Ignacio de la Llave||94731|30|94731||09|147|0002|Rural|
 94777|Tetlatzinga|Pueblo|Soledad Atzompa|Veracruz de Ignacio de la Llave||94731|30|94731||28|147|3069|Rural|
 94777|Atempa|Ranchería|Soledad Atzompa|Veracruz de Ignacio de la Llave||94731|30|94731||29|147|7976|Rural|
 94777|Mexcala|Ranchería|Soledad Atzompa|Veracruz de Ignacio de la Llave||94731|30|94731||29|147|7977|Rural|
@@ -148436,6 +148444,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 95075|Aticpac|Ranchería|Texhuacán|Veracruz de Ignacio de la Llave||94301|30|94301||29|171|0005|Rural|
 95075|Palulca|Ranchería|Texhuacán|Veracruz de Ignacio de la Llave||94301|30|94301||29|171|7907|Rural|
 95076|Tecpantzacualco|Ranchería|Texhuacán|Veracruz de Ignacio de la Llave||94301|30|94301||29|171|0008|Rural|
+95076|Atiopa|Ranchería|Texhuacán|Veracruz de Ignacio de la Llave||94301|30|94301||29|171|0009|Rural|
 95077|Tlalca|Pueblo|Texhuacán|Veracruz de Ignacio de la Llave||94301|30|94301||28|171|0001|Rural|
 95077|El Mirador|Ranchería|Texhuacán|Veracruz de Ignacio de la Llave||94301|30|94301||29|171|7533|Rural|
 95080|Barrio Nuevo|Pueblo|Tezonapa|Veracruz de Ignacio de la Llave||68414|30|68414||28|173|0005|Rural|
@@ -151897,6 +151906,7 @@ d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficin
 96934|Galapata|Rancho|Hidalgotitlán|Veracruz de Ignacio de la Llave||96701|30|96701||48|070|0008|Rural|
 96934|Los Laureles|Rancho|Hidalgotitlán|Veracruz de Ignacio de la Llave||96701|30|96701||48|070|0010|Rural|
 96934|Chichonal|Rancho|Hidalgotitlán|Veracruz de Ignacio de la Llave||96701|30|96701||48|070|0019|Rural|
+96934|Coapiloloya|Ranchería|Hidalgotitlán|Veracruz de Ignacio de la Llave||96701|30|96701||29|070|0023|Rural|
 96934|San Carlos|Barrio|Hidalgotitlán|Veracruz de Ignacio de la Llave||96701|30|96701||02|070|4005|Rural|
 96936|Cerro Pelón (El Retorno)|Rancho|Hidalgotitlán|Veracruz de Ignacio de la Llave||96701|30|96701||48|070|0015|Rural|
 96936|La Esperanza|Pueblo|Hidalgotitlán|Veracruz de Ignacio de la Llave||96701|30|96701||28|070|4018|Rural|
