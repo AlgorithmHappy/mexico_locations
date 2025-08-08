@@ -5,16 +5,18 @@ import java.io.Serializable;
 import dev.gerardomarquez.mexico_locations.entities.DataTextRaw;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /*
  * Archivo que debe contener la estructura de los datos del archivo de texto de localidades de México.
  */
 @Data
-@Builder
+//@Builder
+@NoArgsConstructor
 public class TextFileMexicoLocationsDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+    //d_codigo|d_asenta|d_tipo_asenta|D_mnpio|d_estado|d_ciudad|d_CP|c_estado|c_oficina|c_CP|c_tipo_asenta|c_mnpio|id_asenta_cpcons|d_zona|c_cve_ciudad
     private String d_codigo; // Código Postal asentamiento
     private String d_asenta; // Nombre asentamiento
     private String d_tipo_asenta; // Tipo de asentamiento (Catálogo SEPOMEX)
@@ -24,12 +26,12 @@ public class TextFileMexicoLocationsDto implements Serializable {
     private String d_CP; // Código Postal de la Administración Postal que reparte al asentamiento
     private String c_estado; // Clave Entidad (INEGI, Marzo 2013)
     private String c_oficina; // Código Postal de la Administración Postal que reparte al asentamiento
+    private String c_CP; // Campo Vacio
     private String c_tipo_asenta; // Clave Tipo de asentamiento (Catálogo SEPOMEX)
     private String c_mnpio; // Clave Municipio (INEGI, Marzo 2013)
     private String id_asenta_cpcons; // Identificador único del asentamiento (nivel municipal)
     private String d_zona; // Zona en la que se ubica el asentamiento (Urbano/Rural)
     private String c_cve_ciudad; // Clave Ciudad (Catálogo SEPOMEX)
-    private String c_CP; // Campo Vacio
 
     public DataTextRaw toEntity() {
         return DataTextRaw.builder()

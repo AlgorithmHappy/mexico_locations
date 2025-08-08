@@ -48,6 +48,27 @@ public class Constants {
         Map.entry("c_cve_ciudad", 14)
         
     );
+
+    public static final String[] TEXT_FILE_MEXICO_LOCATIONS_COLUMNS_ARRAY = {
+        "d_codigo",
+        "d_asenta",  
+        "d_tipo_asenta",
+        "D_mnpio",
+        "d_estado",
+        "d_ciudad",
+        "d_CP",
+        "c_estado",
+        "c_oficina",
+        "c_CP",
+        "c_tipo_asenta",
+        "c_mnpio",
+        "id_asenta_cpcons",
+        "d_zona",   
+        "c_cve_ciudad"
+    };
+
+    public static final Integer GLOBAL_LINES_TO_SKIP = 2;
+
     public static final Integer TEXT_FILE_SIZE_COLUMNS = 15;
     public static final Integer TEXT_FILE_SIZE_COLUMNS_ALTERNATIVE = 14;
 
@@ -55,4 +76,10 @@ public class Constants {
      * Constantes para las claves de los objetos en el contexto del job
      */
     public static String CONTEXT_LIST_MEXICO_LOCATIONS = "listMexicoLocations";
+
+
+    /*
+     * Nombres de jobs, beans y steps de spring batch
+     */
+    public static String NAME_ITEM_READER = "CPdescargaReader";
 }

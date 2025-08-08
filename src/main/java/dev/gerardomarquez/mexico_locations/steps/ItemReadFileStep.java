@@ -83,7 +83,7 @@ public class ItemReadFileStep implements Tasklet {
                 String[] parts = line.split(fileSeparator);
 
                 if (parts.length == Constants.TEXT_FILE_SIZE_COLUMNS) {
-                    TextFileMexicoLocationsDto location = TextFileMexicoLocationsDto.builder()
+                    /*TextFileMexicoLocationsDto location = TextFileMexicoLocationsDto.builder()
                         .d_codigo(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_codigo")].trim() ) // d_codigo
                         .d_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_asenta")].trim() ) // d_asenta
                         .d_tipo_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_tipo_asenta")].trim() ) // d_tipo_asenta
@@ -99,11 +99,12 @@ public class ItemReadFileStep implements Tasklet {
                         .id_asenta_cpcons(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("id_asenta_cpcons")].trim() ) // id_asenta_cpcons
                         .d_zona(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_zona")].trim() ) // d_zona
                         .c_cve_ciudad(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("c_cve_ciudad")].trim() ) // c_cve_ciudad
-                        .build();
+                        .build();*/
                     
-                    locations.add(location);
+                    //locations.add(location);
+                    locations.add(new TextFileMexicoLocationsDto() );
                 } else if(parts.length == Constants.TEXT_FILE_SIZE_COLUMNS_ALTERNATIVE){
-                    TextFileMexicoLocationsDto location = TextFileMexicoLocationsDto.builder()
+                    /*TextFileMexicoLocationsDto location = TextFileMexicoLocationsDto.builder()
                         .d_codigo(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_codigo")].trim() ) // d_codigo
                         .d_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_asenta")].trim() ) // d_asenta
                         .d_tipo_asenta(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_tipo_asenta")].trim() ) // d_tipo_asenta
@@ -120,7 +121,8 @@ public class ItemReadFileStep implements Tasklet {
                         .d_zona(parts[Constants.TEXT_FILE_MEXICO_LOCATIONS_COLUMNS.get("d_zona")].trim() ) // d_zona
                         .build();
 
-                    locations.add(location);
+                    locations.add(location);*/
+                    locations.add(new TextFileMexicoLocationsDto() );
                 } else {
                     log.warn(String.format(Constants.MSG_WARNING_INVALID_LINE, ++lineNumber, line) );
                 }
