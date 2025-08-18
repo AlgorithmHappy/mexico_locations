@@ -3,7 +3,6 @@ package dev.gerardomarquez.mexico_locations.dtos;
 import java.io.Serializable;
 
 import dev.gerardomarquez.mexico_locations.entities.DataTextRaw;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,7 +10,6 @@ import lombok.NoArgsConstructor;
  * Archivo que debe contener la estructura de los datos del archivo de texto de localidades de México.
  */
 @Data
-//@Builder
 @NoArgsConstructor
 public class TextFileMexicoLocationsDto implements Serializable {
 
@@ -33,6 +31,10 @@ public class TextFileMexicoLocationsDto implements Serializable {
     private String d_zona; // Zona en la que se ubica el asentamiento (Urbano/Rural)
     private String c_cve_ciudad; // Clave Ciudad (Catálogo SEPOMEX)
 
+    /*
+     * Método que convierte el DTO a entidad
+     * @return DataTextRaw entidad que representa la fila del archivo de texto en una entidad JPA
+     */
     public DataTextRaw toEntity() {
         return DataTextRaw.builder()
             .d_codigo(this.d_codigo)

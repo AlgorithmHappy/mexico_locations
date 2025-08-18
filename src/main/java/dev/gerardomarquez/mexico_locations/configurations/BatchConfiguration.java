@@ -1,7 +1,6 @@
 package dev.gerardomarquez.mexico_locations.configurations;
 
 import java.io.File;
-import java.nio.charset.Charset;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -86,18 +85,6 @@ public class BatchConfiguration {
     private ItemDecompressFileStep itemDecompressFileStep;
 
     /*
-     * Paso para leer el archivo .txt de las localidades de México
-     */
-    @Autowired
-    private ItemReadFileStep itemReadFileStep;
-
-    /*
-     * Paso para cargar los datos leídos en la base de datos
-     */
-    @Autowired
-    private ItemLoadStep itemLoadStep;
-
-    /*
      * Repositorio de trabajos de Spring Batch.
      */
     private final JobRepository jobRepository;
@@ -113,6 +100,8 @@ public class BatchConfiguration {
      * Inyección por constructor de JobRepository y PlatformTransactionManager.
      * @param jobRepository Repositorio de trabajos de Spring Batch.
      * @param transactionManager Administrador de transacciones de Spring.
+     * @param itemDistributeStoreProcedureStep Paso para distribuir los datos usando un procedimiento almacenado.
+     * @param entityManagerFactory Factoría de EntityManager para JPA.
      */
     public BatchConfiguration(
         JobRepository jobRepository,
@@ -160,40 +149,22 @@ public class BatchConfiguration {
     }
 
     /*
-     * Se crea el cuarto paso que consiste en leer el archivo .txt de las localidades de México
-     * @return El paso de lectura del archivo de texto
+     * Se crea el cuarto paso que consiste en un step para pausar y dejer un tiempo para que el paso de 
+     * guardar la informacion tome bien el archivo ya que si se hace al instante da un error
      */
     @Bean
-    public Step itemReadFileStepBean() {
-        return new StepBuilder("itemReadFileStepBean", jobRepository)
-            .tasklet(itemReadFileStep, transactionManager )
+    public Step stepPausa() {
+        return new StepBuilder("stepPausa", jobRepository)
+            .tasklet((contribution, chunkContext) -> {
+                Thread.sleep(5000);
+                return RepeatStatus.FINISHED;
+            }, transactionManager)
             .build();
     }
 
     /*
-     * Se crea el quinto paso que consiste en cargar los datos leídos en la base de datos
-     * @return El paso de carga de datos
-     */
-    @Bean
-    public Step itemLoadStepBean() {
-        return new StepBuilder("itemLoadStepBean", jobRepository)
-            .tasklet(itemLoadStep, transactionManager )
-            .build();
-    }
-
-    /*
-     * Se crea el quinto paso que consiste en cargar los datos leídos en la base de datos
-     * @return El paso de carga de datos
-     */
-    @Bean
-    public Step itemDistributeSotreProcedureStepBean() {
-        return new StepBuilder("itemDistributeSotreProcedureStepBean", jobRepository)
-            .tasklet(itemDistributeStoreProcedureStep, transactionManager )
-            .build();
-    }
-
-    /*
-     * Lectura de las locaciones de mexico desde spring batch con su "Item"
+     * Se crea el item que consiste en la Lectura de las locaciones de mexico desde spring batch con su "Item"
+     * obteniendo los datos desde el txt
      * @return FlatFileItemReader<TextFileMexicoLocationsDto> Lista de los renglones ya transformados a la clase TextFileMexicoLocationsDto
      */
     @Bean
@@ -235,13 +206,16 @@ public class BatchConfiguration {
     public JpaItemWriter<DataTextRaw> itemWriter() {
         JpaItemWriter<DataTextRaw> writer = new JpaItemWriter<>();
         writer.setEntityManagerFactory(entityManagerFactory);
-        writer.setUsePersist(true); // usa persist en vez de merge
+        writer.setUsePersist(true);
         return writer;
     }
 
     /*
-     * paso que une el reader y el writer de spring batch para leer los datos del txt e insertarlos a
-     * la base de datos
+     * Se crea el quinto paso que consiste en unir el reader y el writer de spring batch para leer los datos
+     * del txt e insertarlos a la base de datos
+     * @param reader Reader que obtiene los datos del txt.
+     * @param processor Procesador que transforma los datos del reader a la entidad DataTextRaw.
+     * @return Step Paso que une el reader y el writer.
      */
     @Bean
     public Step itemReadAndSaveDataStepBean(
@@ -258,21 +232,22 @@ public class BatchConfiguration {
     }
 
     /*
-     * step para pausar y dejer un tiempo para que el paso de guardar la informacion tome bien el archivo
-     * ya que si se hace al instante da un error
+     * Se crea el sexto paso que consiste en cargar los datos leídos del txt en la base de datos
+     * @return El paso de carga de datos
      */
     @Bean
-    public Step stepPausa() {
-        return new StepBuilder("stepPausa", jobRepository)
-            .tasklet((contribution, chunkContext) -> {
-                Thread.sleep(5000);
-                return RepeatStatus.FINISHED;
-            }, transactionManager)
+    public Step itemDistributeSotreProcedureStepBean() {
+        return new StepBuilder("itemDistributeSotreProcedureStepBean", jobRepository)
+            .tasklet(itemDistributeStoreProcedureStep, transactionManager )
             .build();
     }
 
      /*
      * Creacion de todo el "Job" todo el procedimiento del batch
+     * @param itemReader Reader que obtiene los datos del txt.
+     * @param processor Procesador que transforma los datos del reader a la entidad DataTextRaw inyectado por default por spring desde
+     * el paquete de dtos clase.
+     * @param itemWriter Writer que guarda los datos en la base de datos.
      * @return Job Job de spring batch
      */
     @Bean
@@ -286,8 +261,6 @@ public class BatchConfiguration {
             .next(itemDownloadZipStepBean() )
             .next(itemDecompressFileStepBean() )
             .next(stepPausa() )
-            /*.next(itemReadFileStepBean() )
-            .next(itemLoadStepBean() )*/
             .next(itemReadAndSaveDataStepBean(itemReader, processor, itemWriter) )
             .next(itemDistributeSotreProcedureStepBean() )
             .build();

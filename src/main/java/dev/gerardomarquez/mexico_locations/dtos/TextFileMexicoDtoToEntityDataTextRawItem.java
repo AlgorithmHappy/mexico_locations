@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import dev.gerardomarquez.mexico_locations.entities.DataTextRaw;
 
 /*
- * Clase que implementa de spring batch para convertir el dto a entiti y que pase transparente en spring batch
+ * Clase que implementa de spring batch para convertir el dto a entity y que pase transparente en spring batch
  */
 @Component
 public class TextFileMexicoDtoToEntityDataTextRawItem implements ItemProcessor<TextFileMexicoLocationsDto, DataTextRaw> {
