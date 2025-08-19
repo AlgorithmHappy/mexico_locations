@@ -23,6 +23,9 @@ public class ItemDistributeStoreProcedureStep implements Tasklet {
     @Value("${text.raw.level.history}")
     private String levelHistory;
 
+    @Value("${text.raw.level.history.name}")
+    private String stepNameToLoadToDtaBase;
+
     /*
      * Para ejecutar el procedimiento almacenado
      */
@@ -41,7 +44,7 @@ public class ItemDistributeStoreProcedureStep implements Tasklet {
      */
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
-        jdbcTemplate.execute(String.format(Constants.PROCEDURE_DATA_TEXT_RAW_TO_TABLES, levelHistory) );
+        jdbcTemplate.execute(String.format(Constants.PROCEDURE_DATA_TEXT_RAW_TO_TABLES, levelHistory, stepNameToLoadToDtaBase) );
         return RepeatStatus.FINISHED;
     }
 

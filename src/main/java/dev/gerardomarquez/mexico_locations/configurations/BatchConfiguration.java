@@ -63,8 +63,18 @@ public class BatchConfiguration {
     @Value("${decompress.file.separator}")
     private String fileSeparator;
 
+    /*
+     * Codificación del archivo de texto que se descomprimirá.
+     */
     @Value("${decompress.file.encoding}")
     private String fileEncoding;
+
+    /*
+     * Nombre del paso que guarda los datos en la base de datos.
+     * Dicho nombre tambien lo utiliza spring batch para identificar el paso en la base de datos.
+     */
+    @Value("${text.raw.level.history.name}")
+    private String stepNameToLoadToDtaBase;
 
     /*
      * Paso para preparar el sistema de archivos, asegurando que las carpetas estén limpias
@@ -223,7 +233,7 @@ public class BatchConfiguration {
         ItemProcessor<TextFileMexicoLocationsDto, DataTextRaw> processor,
         ItemWriter<DataTextRaw> writer
     ) {
-        return new StepBuilder("itemReadAndSaveDataStepBean", jobRepository)
+        return new StepBuilder(stepNameToLoadToDtaBase, jobRepository)
             .<TextFileMexicoLocationsDto, DataTextRaw>chunk(1000, transactionManager)
             .reader(reader)
             .processor(processor)

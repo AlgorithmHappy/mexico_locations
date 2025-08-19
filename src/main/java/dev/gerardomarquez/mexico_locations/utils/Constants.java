@@ -28,7 +28,7 @@ public class Constants {
     public static String PREFS_CHROME_DRIVER_WEBDRIVER = "webdriver.chrome.driver";
     public static Integer PREFS_CHROME_DRIVER_WAIT_DOWNLOAD = 1000;
 
-    public static String PROCEDURE_DATA_TEXT_RAW_TO_TABLES = "CALL data_text_raw_to_tables(%s)";
+    public static String PROCEDURE_DATA_TEXT_RAW_TO_TABLES = "CALL data_text_raw_to_tables(%s, '%s')";
 
     public static final Map<String, Integer> TEXT_FILE_MEXICO_LOCATIONS_COLUMNS = Map.ofEntries(
         Map.entry("d_codigo", 0),
