@@ -21,7 +21,7 @@ public class Prueba {
     // Se ejecuta cada 60 segundos
     @Scheduled(fixedDelay = 36000000)
     public void ejecutarJob() {
-        try {
+        /*try {
             JobParameters params = new JobParametersBuilder()
                 .addLong("timestamp", System.currentTimeMillis()) // para que cada ejecución sea única
                 .toJobParameters();
@@ -31,6 +31,7 @@ public class Prueba {
         } catch (Exception e) {
             System.out.println("Error al ejecutar el job: " + e.getMessage());
             e.printStackTrace();
-        }
+        }*/
+        System.out.println("No se ejecuta solo quiero levantar el servicio rest");
     }
 }

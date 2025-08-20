@@ -1,0 +1,212 @@
+Table asentamientos {
+  id integer [not null]
+  asentamiento character
+
+  Note: "Catalogo de nombres de asentamientos (colonias, barrios, etc.)"
+}
+
+Table batch_job_execution {
+  job_execution_id bigint [not null]
+  version bigint
+  job_instance_id bigint [not null]
+  create_time timestamp [not null]
+  start_time timestamp
+  end_time timestamp
+  status character
+  exit_code character
+  exit_message character
+  last_updated timestamp
+  job_configuration_location character
+}
+
+Table batch_job_execution_context {
+  job_execution_id bigint [not null]
+  short_context character [not null]
+  serialized_context text
+}
+
+Table batch_job_execution_params {
+  job_execution_id bigint [not null]
+  parameter_name character [not null]
+  parameter_type character [not null]
+  parameter_value character
+  identifying character(1) [not null]
+}
+
+Table batch_job_instance {
+  job_instance_id bigint [not null]
+  version bigint
+  job_name character [not null]
+  job_key character [not null]
+}
+
+Table batch_step_execution {
+  step_execution_id bigint [not null]
+  version bigint
+  step_name character
+  job_execution_id bigint [not null]
+  start_time timestamp
+  end_time timestamp
+  status character
+  commit_count bigint
+  read_count bigint
+  filter_count bigint
+  write_count bigint
+  read_skip_count bigint
+  write_skip_count bigint
+  process_skip_count bigint
+  rollback_count bigint
+  exit_code character
+  exit_message character
+  last_updated timestamp
+  create_time timestamp
+}
+
+Table batch_step_execution_context {
+  step_execution_id bigint [not null]
+  short_context character [not null]
+  serialized_context text
+}
+
+Table catalogo_de_tipos_de_asentamientos {
+  id smallint [not null]
+  clave_de_tipo_de_asentamiento character
+  tipo_de_asentamiento character
+
+  Note: "Catalogo de tipos de asentamientos (colonia, condominio, barrio, etc.)"
+}
+
+Table catalogo_de_zonas {
+  id smallint [not null]
+  tipo_de_zona character
+
+  Note: "Catalogo de tipos de zonas (rural, urbano o semiurbano)"
+}
+
+Table ciudades {
+  id integer [not null]
+  ciudad character
+
+  Note: "Catalogo de nombres de ciudades por ejemplo ciudad de méxico"
+}
+
+Table claves_oficina {
+  id integer [not null]
+  clave_oficina character
+  d_cp character
+
+  Note: "Claves de oficina que, segun la pagina oficial de correos de mexico esta es la descripcion del campo (Código Postal de la Administración Postal que reparte al asentamiento). Quiero suponer que son las claves de oficinas de los correos que entregan a sus respectivos codigos postales. El campo de (d_cp) es el mismo que (clave_oficina)."
+}
+
+Table codigos_postales {
+  id integer [not null]
+  codigo_postal character
+  id_oficina integer
+
+  Note: "Tabla que contiene todos los codigos postales y su relacion de a que oficina pertenece."
+}
+
+Table cruce_asentamientos_municipios {
+  id integer [not null]
+  id_asentamiento integer
+  id_cruce_estado_municipio integer
+  id_asenta_cpcons character
+  id_tipo_de_asentamiento smallint
+  id_zona smallint
+  id_codigo_postal integer
+
+  Note: "Tabla que contiene los datos de todos los asentamientos, que codigo postal tiene, que tipo de zona es, el tipo de asentamiento, el id que maneja el municipio para ese asentamiento, su municipio y su id para relacionarlo con el nombre de asentamiento. Es un cruce ya que su relacion es de muchos a muchos"
+}
+
+Table cruce_ciudades_municipios {
+  id integer [not null]
+  clave_ciudad character
+  id_ciudad integer
+  id_cruce_estado_municipio integer
+
+  Note: "Es el cruce de que clave de ciudad le asigno el municipio a la ciudad que pertenece. La relacion es de muchos a muchos por eso es un cruce. Tiene el id_cruce_estado_municipio porque los nombres de municipios se repites, no son unicos asi que para identificar un municipio se debe de hacer no solo por su nombre si no tambie a que estado le pertenece."
+}
+
+Table cruce_estados_municipios {
+  id integer [not null]
+  id_estado integer
+  id_municipio integer
+  clave_municipio character
+
+  Note: "Cruce de estados municipios, como los nombres se repiten esta tabla enlaza su nombre con su estado para identificar el municipio unico."
+}
+
+Table data_text_raw {
+  id bigint [not null]
+  d_mnpio character
+  c_cp character
+  c_cve_ciudad character
+  c_estado character
+  c_mnpio character
+  c_oficina character
+  c_tipo_asenta character
+  d_cp character
+  d_asenta character
+  d_ciudad character
+  d_codigo character
+  d_estado character
+  d_tipo_asenta character
+  d_zona character
+  id_asenta_cpcons character
+
+  Note: "Tabla auxiliar donde se deposita en crudo la informacion descargada de la pagina oficial de mexico: https://www.correosdemexico.gob.mx/sslservicios/consultacp/CodigoPostal_Exportar.aspx"
+}
+
+Table data_text_raw_history {
+  step_execution_id bigint
+  id bigint [not null]
+  d_mnpio character
+  c_cp character
+  c_cve_ciudad character
+  c_estado character
+  c_mnpio character
+  c_oficina character
+  c_tipo_asenta character
+  d_cp character
+  d_asenta character
+  d_ciudad character
+  d_codigo character
+  d_estado character
+  d_tipo_asenta character
+  d_zona character
+  id_asenta_cpcons character
+
+  Note: "Historial de la informacion en crudo en cada iteracion del batch."
+}
+
+Table estados {
+  id smallint [not null]
+  clave_de_estado character
+  estado character
+
+  Note: "Catalogo de todos los estados de mexico."
+}
+
+Table municipios {
+  id integer [not null]
+  municipio character
+
+  Note: "Tabla que contiene los datos de todos los asentamientos, que codigo postal tiene, que tipo de zona es, el tipo de asentamiento, el id que maneja el municipio para ese asentamiento, su municipio y su id para relacionarlo con el nombre de asentamiento. Es un cruce ya que su relacion es de muchos a muchos"
+}
+
+
+Ref: codigos_postales.id_oficina > claves_oficina.id
+Ref: cruce_asentamientos_municipios.id_asentamiento > asentamientos.id
+Ref: cruce_asentamientos_municipios.id_cruce_estado_municipio > cruce_estados_municipios.id
+Ref: cruce_asentamientos_municipios.id_tipo_de_asentamiento > catalogo_de_tipos_de_asentamientos.id
+Ref: cruce_asentamientos_municipios.id_zona > catalogo_de_zonas.id
+Ref: cruce_asentamientos_municipios.id_codigo_postal > codigos_postales.id
+Ref: cruce_ciudades_municipios.id_cruce_estado_municipio > cruce_estados_municipios.id
+Ref: cruce_ciudades_municipios.id_ciudad > ciudades.id
+Ref: cruce_estados_municipios.id_estado > estados.id
+Ref: cruce_estados_municipios.id_municipio > municipios.id
+Ref: data_text_raw_history.step_execution_id > batch_step_execution.step_execution_id
+Ref: batch_job_execution_context.job_execution_id > batch_job_execution.job_execution_id
+Ref: batch_job_execution_params.job_execution_id > batch_job_execution.job_execution_id
+Ref: batch_step_execution.job_execution_id > batch_job_execution.job_execution_id
+Ref: batch_job_execution.job_instance_id > batch_job_instance.job_instance_id

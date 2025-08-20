@@ -1,12 +1,18 @@
-CREATE or replace PROCEDURE data_text_raw_to_tables()
-LANGUAGE plpgsql
-AS $$
+CREATE OR REPLACE PROCEDURE public.data_text_raw_to_tables(IN level_history integer, IN in_step_name character varying)
+ LANGUAGE plpgsql
+AS $procedure$
+DECLARE
+	max_id_step INT; -- Id maximo para el log de "step" de spring batch
+	min_id_step INT; -- Id minimo para el historial de insercciones que se tendra que borrar
+	count_history INT; -- Cantidad de bloques insertados del historial
+	num_iterations INT;
+	i INT;
 BEGIN
-/*
- * Procedimiento almacenado que transforma la tabla de datos en bruto
- * en datos normalizados distribullendolos en las diferentes tablas del
- * esquema para mejor gestion de datos. 
- */
+	/*
+	 * Procedimiento almacenado que transforma la tabla de datos en bruto
+	 * en datos normalizados distribullendolos en las diferentes tablas del
+	 * esquema para mejor gestion de datos. 
+	 */
 	-- Inserta todas las zonas que vienen en los datos en crudo que no existan
 	INSERT INTO catalogo_de_zonas (tipo_de_zona)
 		SELECT DISTINCT d_zona FROM data_text_raw dtw where not exists(
@@ -88,5 +94,64 @@ BEGIN
 		and cam.id_zona = cdz.id and cam.id_codigo_postal = cp.id and cam.id_tipo_de_asentamiento = cdtda.id and cam.id_asenta_cpcons = dtr.id_asenta_cpcons
 	) order by a.id, cem.id, cdz.id, cp.id, cdtda.id, dtr.id_asenta_cpcons;
 
+	IF level_history <= 0 Then
+		--Delete from data_text_raw_history; -- Descomentar en casode que al poner 0 se requiera borrar todo el historial en el caso de que hubiera dicho historial
+		return;
+	end if;
+
+	Select count(distinct
+		step_execution_id
+	)
+	into
+		count_history
+	from
+		data_text_raw_history;
+
+	Select 
+		max(bse.step_execution_id)
+	into
+		max_id_step
+	from
+		batch_step_execution bse
+	where
+		bse.step_name = in_step_name;
+
+	Select 
+		min(dtrh.step_execution_id)
+	into
+		min_id_step
+	from
+		data_text_raw_history dtrh;
+
+	if count_history >= level_history Then
+		Delete from data_text_raw_history where step_execution_id = min_id_step;
+
+		/*
+			----------- Lo siguiente es en el caso de que cambien un nivel muy alto de nivel de historia a un nivel muy bajo para eliminar todo lo antiguo -----------
+		*/
+		num_iterations := (count_history - level_history);
+		if num_iterations < 0 Then
+			num_iterations = 0;
+		end if;
+		FOR i in 1..num_iterations loop
+			Select 
+				min(dtrh.step_execution_id)
+			into
+				min_id_step
+			from
+				data_text_raw_history dtrh;
+			Delete from data_text_raw_history where step_execution_id = min_id_step;
+		end loop;
+		/*
+			----------- FIN -----------
+		*/
+	end if;
+
+	INSERT INTO data_text_raw_history (step_execution_id, d_mnpio,c_cp,c_cve_ciudad,c_estado,c_mnpio,c_oficina,c_tipo_asenta,d_cp,d_asenta,d_ciudad,d_codigo,d_estado,d_tipo_asenta,d_zona,id_asenta_cpcons)
+	 	select max_id_step, d_mnpio,c_cp,c_cve_ciudad,c_estado,c_mnpio,c_oficina,c_tipo_asenta,d_cp,d_asenta,d_ciudad,d_codigo,d_estado,d_tipo_asenta,d_zona,id_asenta_cpcons from data_text_raw order by id asc;
+
+	Delete from data_text_raw;
+		
 END;
-$$;
+$procedure$
+;

@@ -18,6 +18,8 @@ public class Constants {
     public static String MSG_ERROR_DECOMPRESS_ZIP = "Error al descomprimir el archivo ZIP: %s.";
     public static String MSG_ERROR_READ_TEXT_FILE = "Error al leer el archivo: %s";
 
+    public static String MSG_SUCCESS = "success.message";
+
     public static String MSG_WARNING_INVALID_LINE = "Línea con formato incorrecto o incompleto, linea #: %d linea completa: %s.";
 
     public static String PREFS_CHROME_DRIVER = "prefs";
