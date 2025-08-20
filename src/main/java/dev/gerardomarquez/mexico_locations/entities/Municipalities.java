@@ -7,43 +7,36 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /*
- * Entidad que representa el catalogo de los Estados de México.
+ * Entidad que representa el catalogo de los Municipios de todo México.
  */
 @Entity
-@Table(name = "estados")
-@NoArgsConstructor
+@Table(name = "municipios")
 @Data
-public class States {
+@NoArgsConstructor
+public class Municipalities {
 
     /*
-     * Identificador único de cada Estado de méxico.
+     * Identificador único de cada municipio de méxico.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Short id;
+    private Integer id;
 
     /*
-     * Codigo de estado que le puso el INEGI.
+     * Nombre del municipio, este nombre puede estar repetido en 2 o mas estados.
      */
-    @Column(name = "clave_de_estado")
-    private String stateCode;
-
-    /*
-     * Nombre del estado.
-     */
-    @Column(name = "estado")
+    @Column(name = "municipio")
     private String name;
 
     /*
      * Lista de cruces entre los estados y municipios de México.
      */
-    @OneToMany(mappedBy = "states")
+    @OneToMany(mappedBy = "municipalities")
     private List<MunicipalitiesStatesMappingTable> municipalitiesStatesMappingTable;
 }

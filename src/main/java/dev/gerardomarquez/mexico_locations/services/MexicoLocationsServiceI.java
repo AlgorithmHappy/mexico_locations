@@ -15,4 +15,12 @@ public interface MexicoLocationsServiceI {
      * @return Clase generica en donde en el data devuelve la "Page" de los estados.
      */
     public Response getAllStates(Pageable pageable);
+
+    /*
+     * Metodo que devuelve todos los municipios dependiendo su codigo de estado.
+     * @param pageable Paginacion de spring.
+     * @param stateCode Codigo de estado INEGI.
+     * @return Clase generica en donde en el data devuelve la "Page" de los estados.
+     */
+    public Response getAllMunicipalitiesByStateCode(Pageable pageable, String stateCode);
 }

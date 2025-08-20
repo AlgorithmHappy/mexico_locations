@@ -129,7 +129,7 @@ Table cruce_ciudades_municipios {
 
 Table cruce_estados_municipios {
   id integer [not null]
-  id_estado integer
+  id_estado smallint
   id_municipio integer
   clave_municipio character
 
