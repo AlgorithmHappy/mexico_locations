@@ -2,7 +2,6 @@ package dev.gerardomarquez.mexico_locations.services;
 
 import java.util.List;
 import java.util.Locale;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +14,11 @@ import dev.gerardomarquez.mexico_locations.dtos.MunicipalityDto;
 import dev.gerardomarquez.mexico_locations.dtos.PageDto;
 import dev.gerardomarquez.mexico_locations.dtos.Response;
 import dev.gerardomarquez.mexico_locations.dtos.StatesDto;
-import dev.gerardomarquez.mexico_locations.entities.Municipalities;
+import dev.gerardomarquez.mexico_locations.dtos.ZipCodeDto;
 import dev.gerardomarquez.mexico_locations.entities.States;
 import dev.gerardomarquez.mexico_locations.repositories.MunicipalitiesStatesMappingRepository;
 import dev.gerardomarquez.mexico_locations.repositories.StatesRepository;
+import dev.gerardomarquez.mexico_locations.repositories.SuburbMunicipalitiesStatesMappingRepository;
 import dev.gerardomarquez.mexico_locations.utils.Constants;
 
 /*
@@ -44,6 +44,9 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
      */
     @Autowired
     private MunicipalitiesStatesMappingRepository municipalitiesStatesMappingRepository;
+
+    @Autowired
+    private SuburbMunicipalitiesStatesMappingRepository suburbMunicipalitiesStatesMappingRepository;
 
     /*
     * {@inheritDoc}
@@ -90,6 +93,35 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
         pageDto.setPageNumber(pageMunicipalitiesDto.getNumber() );
         pageDto.setPageSize(pageMunicipalitiesDto.getSize() );
         pageDto.setTotalElements(pageMunicipalitiesDto.getTotalElements() );
+
+        Response response = new Response();
+        response.setData(pageDto);
+        response.setSuccess(Boolean.TRUE);
+        response.setMessage(messageSource.getMessage(Constants.MSG_SUCCESS, null, Locale.getDefault() ) );
+
+        return response;
+    }
+
+    /*
+    * {@inheritDoc}
+    */
+    @Override
+    public Response getAllZipCodesByStateCodeAndMunicipalityCode(
+        Pageable pageable,
+        String stateCode,
+        String municipalityCode
+    ) {
+        Page<ZipCodeDto> pageZipCodeDto = suburbMunicipalitiesStatesMappingRepository.findZipCodesByStateCodeAndMunicipalityCode(
+            stateCode,
+            municipalityCode,
+            pageable
+        );
+
+        PageDto<ZipCodeDto> pageDto = new PageDto();
+        pageDto.setContent(pageZipCodeDto.getContent() );
+        pageDto.setPageNumber(pageZipCodeDto.getNumber() );
+        pageDto.setPageSize(pageZipCodeDto.getSize() );
+        pageDto.setTotalElements(pageZipCodeDto.getTotalElements() );
 
         Response response = new Response();
         response.setData(pageDto);
