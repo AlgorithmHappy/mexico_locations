@@ -42,4 +42,10 @@ public interface MexicoLocationsServiceI {
      * @return Clase generica en donde en el data devuelve la "PageDto" de los codigos postales
      */
     public Response getAllSuburbsByStateCodeAndMunicipalityCodeAndZipCode(Pageable pageable, String stateCode, String municipalityCode, String zipCode);
+
+    /*
+     * Metodo que devuelve todas las ciudades
+     * @param pageable Paginacion de spring.
+     */
+    public Response getAllCities(Pageable pageable);
 }

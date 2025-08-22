@@ -46,5 +46,6 @@ public class CitiesMunicipalitiesMappingTable {
      * Municipio de la ciudad
      */
     @OneToOne
+    @JoinColumn(name = "id_cruce_estado_municipio")
     private MunicipalitiesStatesMappingTable municipality;
 }

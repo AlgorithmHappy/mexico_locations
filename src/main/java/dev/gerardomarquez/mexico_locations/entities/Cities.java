@@ -1,10 +1,13 @@
 package dev.gerardomarquez.mexico_locations.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,4 +33,10 @@ public class Cities {
      */
     @Column(name = "ciudad")
     private String name;
+
+    /*
+     * Lista de cruce de ciudades por cada municipio
+     */
+    @OneToMany(mappedBy = "cities")
+    private List<CitiesMunicipalitiesMappingTable> city;
 }

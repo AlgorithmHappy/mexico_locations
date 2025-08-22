@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -70,6 +72,14 @@ public class MexicoLocationsController {
         return ResponseEntity.ok(response);
     }
 
+    /*
+     * Endpoint que devuelve todos los asentamientos dependiendo su codigo de estado, municipio y codigo postal.
+     * @param stateCode Codigo de estado INEGI.
+     * @param municipalityCode Codigo de municipio que le asigno el estado.
+     * @param zipCode Codigo postal.
+     * @param pageable Paginacion de spring.
+     * @return Clase generica en donde en el data devuelve el arreglo de datos de los municipios.
+     */
     @GetMapping("/states/{stateCode}/municipalities/{municipalityCode}/zipcodes/{zipCode}")
     public ResponseEntity<Response> getAllSuburbsByStatecodeAndMunicipalityCodeAndZipCodeAndPageable(
         @PathVariable("stateCode") String stateCode,
@@ -81,5 +91,12 @@ public class MexicoLocationsController {
         return ResponseEntity.ok(response);
     }
     
+    @GetMapping("/cities")
+    public ResponseEntity<Response> getMethodName(Pageable pageable) {
+
+        Response response = mexicoLocationsService.getAllCities(pageable);
+
+        return ResponseEntity.ok(response);
+    }
     
 }

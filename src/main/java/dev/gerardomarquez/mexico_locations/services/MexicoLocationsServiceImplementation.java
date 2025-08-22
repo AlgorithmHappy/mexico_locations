@@ -1,5 +1,6 @@
 package dev.gerardomarquez.mexico_locations.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
@@ -10,13 +11,17 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 
+import dev.gerardomarquez.mexico_locations.dtos.CityDto;
+import dev.gerardomarquez.mexico_locations.dtos.CityMunicipalityMappingDto;
 import dev.gerardomarquez.mexico_locations.dtos.MunicipalityDto;
 import dev.gerardomarquez.mexico_locations.dtos.PageDto;
 import dev.gerardomarquez.mexico_locations.dtos.Response;
 import dev.gerardomarquez.mexico_locations.dtos.StatesDto;
 import dev.gerardomarquez.mexico_locations.dtos.SuburbDto;
 import dev.gerardomarquez.mexico_locations.dtos.ZipCodeDto;
+import dev.gerardomarquez.mexico_locations.entities.Cities;
 import dev.gerardomarquez.mexico_locations.entities.States;
+import dev.gerardomarquez.mexico_locations.repositories.CitiesRepository;
 import dev.gerardomarquez.mexico_locations.repositories.MunicipalitiesStatesMappingRepository;
 import dev.gerardomarquez.mexico_locations.repositories.StatesRepository;
 import dev.gerardomarquez.mexico_locations.repositories.SuburbMunicipalitiesStatesMappingRepository;
@@ -46,8 +51,17 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
     @Autowired
     private MunicipalitiesStatesMappingRepository municipalitiesStatesMappingRepository;
 
+    /*
+     * Repositorio de los asentamientos
+     */
     @Autowired
     private SuburbMunicipalitiesStatesMappingRepository suburbMunicipalitiesStatesMappingRepository;
+
+    /*
+     * Repositorio de las ciudades de mexico
+     */
+    @Autowired
+    private CitiesRepository citiesRepository;
 
     /*
     * {@inheritDoc}
@@ -154,6 +168,59 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
         pageDto.setPageNumber(pageSuburbDto.getNumber() );
         pageDto.setPageSize(pageSuburbDto.getSize() );
         pageDto.setTotalElements(pageSuburbDto.getTotalElements() );
+
+        Response response = new Response();
+        response.setData(pageDto);
+        response.setSuccess(Boolean.TRUE);
+        response.setMessage(messageSource.getMessage(Constants.MSG_SUCCESS, null, Locale.getDefault() ) );
+
+        return response;
+    }
+
+    /*
+    * {@inheritDoc}
+    */
+    @Override
+    public Response getAllCities(Pageable pageable) {
+        Page<Cities> pageCities = citiesRepository.findAll(pageable);
+
+        List<CityDto> listCityDto = pageCities.getContent().stream()
+            .filter(
+                it -> !it.getName().isBlank()
+            )
+            .map(
+                it -> {
+                    CityDto cityDto = new CityDto();
+                    List<CityMunicipalityMappingDto> listCityMunicipalityMapping = new ArrayList<>();
+
+                    it.getCity().forEach(
+                        jt -> {
+                            CityMunicipalityMappingDto cityMunicipalityMapping = new CityMunicipalityMappingDto();
+                            cityMunicipalityMapping.setId(jt.getId() );
+                            cityMunicipalityMapping.setCityCode(jt.getCityCode() );
+                            cityMunicipalityMapping.setIdMunicipality(jt.getMunicipality().getId() );
+                            cityMunicipalityMapping.setMunicipality(jt.getMunicipality().getMunicipalities().getName() );
+                            cityMunicipalityMapping.setMunicipalityCode(jt.getMunicipality().getMunicipalityCode() );
+                            cityMunicipalityMapping.setState(jt.getMunicipality().getStates().getName() );
+                            cityMunicipalityMapping.setStateCode(jt.getMunicipality().getStates().getStateCode() );
+                            listCityMunicipalityMapping.add(cityMunicipalityMapping);
+                        }
+                    );
+                    
+                    cityDto.setId(it.getId() );
+                    cityDto.setName(it.getName() );
+                    cityDto.setMunicipalityData(listCityMunicipalityMapping);
+
+                    return cityDto;
+                }
+            )
+            .collect(Collectors.toList() );
+
+        PageDto<CityDto> pageDto = new PageDto();
+        pageDto.setContent(listCityDto);
+        pageDto.setPageNumber(pageCities.getNumber() );
+        pageDto.setPageSize(pageCities.getSize() );
+        pageDto.setTotalElements(pageCities.getTotalElements() );
 
         Response response = new Response();
         response.setData(pageDto);
