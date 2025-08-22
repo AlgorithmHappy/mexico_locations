@@ -40,7 +40,7 @@ BEGIN
 
 	-- Inserta todas las ciudades que vienen en los datos en crudo que no existan
 	INSERT into ciudades (ciudad)
-	select distinct dtr.d_ciudad from data_text_raw dtr where not exists(
+	select distinct dtr.d_ciudad from data_text_raw dtr where dtr.d_ciudad != '' and not exists(
 		select c.ciudad from ciudades c where c.ciudad = dtr.d_ciudad
 	) order by dtr.d_ciudad;
 
