@@ -14,6 +14,7 @@ import dev.gerardomarquez.mexico_locations.dtos.MunicipalityDto;
 import dev.gerardomarquez.mexico_locations.dtos.PageDto;
 import dev.gerardomarquez.mexico_locations.dtos.Response;
 import dev.gerardomarquez.mexico_locations.dtos.StatesDto;
+import dev.gerardomarquez.mexico_locations.dtos.SuburbDto;
 import dev.gerardomarquez.mexico_locations.dtos.ZipCodeDto;
 import dev.gerardomarquez.mexico_locations.entities.States;
 import dev.gerardomarquez.mexico_locations.repositories.MunicipalitiesStatesMappingRepository;
@@ -122,6 +123,37 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
         pageDto.setPageNumber(pageZipCodeDto.getNumber() );
         pageDto.setPageSize(pageZipCodeDto.getSize() );
         pageDto.setTotalElements(pageZipCodeDto.getTotalElements() );
+
+        Response response = new Response();
+        response.setData(pageDto);
+        response.setSuccess(Boolean.TRUE);
+        response.setMessage(messageSource.getMessage(Constants.MSG_SUCCESS, null, Locale.getDefault() ) );
+
+        return response;
+    }
+
+    /*
+    * {@inheritDoc}
+    */
+    @Override
+    public Response getAllSuburbsByStateCodeAndMunicipalityCodeAndZipCode(
+        Pageable pageable,
+        String stateCode,
+        String municipalityCode,
+        String zipCode
+    ) {
+        Page<SuburbDto> pageSuburbDto = suburbMunicipalitiesStatesMappingRepository.findSuburbsByStateCodeAndMunicipalityCodeAndZipCode(
+            stateCode,
+            municipalityCode,
+            zipCode,
+            pageable
+        );
+    
+        PageDto<SuburbDto> pageDto = new PageDto();
+        pageDto.setContent(pageSuburbDto.getContent() );
+        pageDto.setPageNumber(pageSuburbDto.getNumber() );
+        pageDto.setPageSize(pageSuburbDto.getSize() );
+        pageDto.setTotalElements(pageSuburbDto.getTotalElements() );
 
         Response response = new Response();
         response.setData(pageDto);

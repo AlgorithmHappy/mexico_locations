@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -68,5 +70,17 @@ public class MexicoLocationsController {
         Response response = mexicoLocationsService.getAllZipCodesByStateCodeAndMunicipalityCode(pageable, stateCode, municipalityCode);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/states/{stateCode}/municipalities/{municipalityCode}/zipcodes/{zipCode}")
+    public ResponseEntity<Response> getAllSuburbsByStatecodeAndMunicipalityCodeAndZipCodeAndPageable(
+        @PathVariable("stateCode") String stateCode,
+        @PathVariable("municipalityCode") String municipalityCode,
+        @PathVariable("zipCode") String zipCode,
+        Pageable pageable
+    ) {
+        Response response = mexicoLocationsService.getAllSuburbsByStateCodeAndMunicipalityCodeAndZipCode(pageable, stateCode, municipalityCode, zipCode);
+        return ResponseEntity.ok(response);
+    }
+    
     
 }

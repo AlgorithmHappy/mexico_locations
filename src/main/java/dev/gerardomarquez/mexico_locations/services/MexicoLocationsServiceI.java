@@ -32,4 +32,14 @@ public interface MexicoLocationsServiceI {
      * @return Clase generica en donde en el data devuelve la "PageDto" de los codigos postales
      */
     public Response getAllZipCodesByStateCodeAndMunicipalityCode(Pageable pageable, String stateCode, String municipalityCode);
+
+    /*
+     * Metodo que devuelve todos los asentamientos de un codigo postal de un municipio y de un estado en especifico.
+     * @param pageable Paginacion de spring.
+     * @param stateCode Codigo de estado INEGI.
+     * @param municipalityCode Codigo de municipio que le asigno el estado para el municipio/delegacion.
+     * @param zipCode Codigo postal.
+     * @return Clase generica en donde en el data devuelve la "PageDto" de los codigos postales
+     */
+    public Response getAllSuburbsByStateCodeAndMunicipalityCodeAndZipCode(Pageable pageable, String stateCode, String municipalityCode, String zipCode);
 }
