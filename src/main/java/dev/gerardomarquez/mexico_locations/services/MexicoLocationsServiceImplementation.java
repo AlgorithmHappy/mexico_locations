@@ -20,7 +20,9 @@ import dev.gerardomarquez.mexico_locations.dtos.StatesDto;
 import dev.gerardomarquez.mexico_locations.dtos.SuburbDto;
 import dev.gerardomarquez.mexico_locations.dtos.ZipCodeDto;
 import dev.gerardomarquez.mexico_locations.entities.Cities;
+import dev.gerardomarquez.mexico_locations.entities.CitiesMunicipalitiesMappingTable;
 import dev.gerardomarquez.mexico_locations.entities.States;
+import dev.gerardomarquez.mexico_locations.repositories.CitiesMunicipalitiesMappingRepository;
 import dev.gerardomarquez.mexico_locations.repositories.CitiesRepository;
 import dev.gerardomarquez.mexico_locations.repositories.MunicipalitiesStatesMappingRepository;
 import dev.gerardomarquez.mexico_locations.repositories.StatesRepository;
@@ -62,6 +64,12 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
      */
     @Autowired
     private CitiesRepository citiesRepository;
+
+    /*
+     * Repositorio de las ciudades de mexico que se mapean por municipio.
+     */
+    @Autowired
+    private CitiesMunicipalitiesMappingRepository citiesMunicipalitiesMappingRepository;
 
     /*
     * {@inheritDoc}
@@ -228,6 +236,62 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
         response.setMessage(messageSource.getMessage(Constants.MSG_SUCCESS, null, Locale.getDefault() ) );
 
         return response;
+    }
+
+    /*
+    * {@inheritDoc}
+    */
+    @Override
+    public Response getAllCitiesByStateCode(Pageable pageable, String stateCode) {
+        Page<CitiesMunicipalitiesMappingTable> pageCitiesMunicipalitiesMapping = citiesMunicipalitiesMappingRepository
+            .findByMunicipalityStatesStateCode(stateCode, pageable);
+
+        List<CityDto> listCityDto = pageCitiesMunicipalitiesMapping.getContent()
+            .stream()
+            .filter(it -> !it.getCities().getName().isBlank() )
+            .map(
+                it -> {
+                    CityDto cityDto = new CityDto();
+                    cityDto.setId(it.getCities().getId() );
+                    cityDto.setName(it.getCities().getName() );
+
+                    List<CityMunicipalityMappingDto> listCityMunicipalityMapping = new ArrayList<>();
+                    CityMunicipalityMappingDto cityMunicipalityMappingDto = new CityMunicipalityMappingDto();
+                    cityMunicipalityMappingDto.setCityCode(it.getCityCode() );
+                    cityMunicipalityMappingDto.setId(it.getId() );
+                    cityMunicipalityMappingDto.setMunicipality(it.getMunicipality().getMunicipalities().getName() );
+                    cityMunicipalityMappingDto.setMunicipalityCode(it.getMunicipality().getMunicipalityCode() );
+                    cityMunicipalityMappingDto.setState(it.getMunicipality().getStates().getName() );
+                    cityMunicipalityMappingDto.setStateCode(it.getMunicipality().getStates().getStateCode() );
+                    cityMunicipalityMappingDto.setIdMunicipality(it.getMunicipality().getId() );
+                    listCityMunicipalityMapping.add(cityMunicipalityMappingDto);
+
+                    cityDto.setMunicipalityData(listCityMunicipalityMapping);
+
+                    return cityDto;
+                }
+            )
+            .collect(Collectors.toList() );
+
+        PageDto<CityDto> pageDto = new PageDto();
+        pageDto.setContent(listCityDto);
+        pageDto.setPageNumber(pageCitiesMunicipalitiesMapping.getNumber() );
+        pageDto.setPageSize(pageCitiesMunicipalitiesMapping.getSize() );
+        pageDto.setTotalElements(pageCitiesMunicipalitiesMapping.getTotalElements() );
+
+        Response response = new Response();
+        response.setData(pageDto);
+        response.setSuccess(Boolean.TRUE);
+        response.setMessage(messageSource.getMessage(Constants.MSG_SUCCESS, null, Locale.getDefault() ) );
+
+        return response;
+    }
+
+    @Override
+    public Response getAllCitiesByStateCodeAndMunicipalityCode(Pageable pageable, String stateCode,
+            String municipalityCdoe) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAllCitiesByStateCodeAndMunicipalityCode'");
     }
 
 }

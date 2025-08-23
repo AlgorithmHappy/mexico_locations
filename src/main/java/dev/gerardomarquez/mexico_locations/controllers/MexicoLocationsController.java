@@ -60,7 +60,7 @@ public class MexicoLocationsController {
      * @param stateCode Codigo de estado INEGI.
      * @param municipalityCode Codigo de municipio que le asigno el estado.
      * @param pageable Paginacion de spring.
-     * @return Clase generica en donde en el data devuelve el arreglo de datos de los municipios.
+     * @return Clase generica en donde en el data devuelve el arreglo de codigos postales.
      */
     @GetMapping("/states/{stateCode}/municipalities/{municipalityCode}/zipcodes")
     public ResponseEntity<Response> getAllZipCodesByStateCodeAndMunicipalityCodeAndPageable(
@@ -78,7 +78,7 @@ public class MexicoLocationsController {
      * @param municipalityCode Codigo de municipio que le asigno el estado.
      * @param zipCode Codigo postal.
      * @param pageable Paginacion de spring.
-     * @return Clase generica en donde en el data devuelve el arreglo de datos de los municipios.
+     * @return Clase generica en donde en el data devuelve el arreglo de asentamientos.
      */
     @GetMapping("/states/{stateCode}/municipalities/{municipalityCode}/zipcodes/{zipCode}")
     public ResponseEntity<Response> getAllSuburbsByStatecodeAndMunicipalityCodeAndZipCodeAndPageable(
@@ -91,6 +91,11 @@ public class MexicoLocationsController {
         return ResponseEntity.ok(response);
     }
     
+    /*
+     * Endpoint que devuelve todas las ciudades de mexico con su respectiva informacion de municipios.
+     * @param pageable Paginacion de spring.
+     * @return Clase generica en donde en el data devuelve el arreglo de ciudades.
+     */
     @GetMapping("/cities")
     public ResponseEntity<Response> getMethodName(Pageable pageable) {
 
@@ -98,5 +103,16 @@ public class MexicoLocationsController {
 
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/states/{stateCode}/cities")
+    public ResponseEntity<Response> getAllCitiesByStatecodeAndPageable(
+        @PathVariable("stateCode") String stateCode,
+        Pageable pageable
+    ) {
+        Response response = mexicoLocationsService.getAllCitiesByStateCode(pageable, stateCode);
+
+        return ResponseEntity.ok(response);
+    }
+    
     
 }

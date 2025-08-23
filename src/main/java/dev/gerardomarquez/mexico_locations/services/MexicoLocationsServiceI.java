@@ -48,4 +48,19 @@ public interface MexicoLocationsServiceI {
      * @param pageable Paginacion de spring.
      */
     public Response getAllCities(Pageable pageable);
+
+    /*
+     * Metodo que devuelve todas las ciudades por codigo de estado.
+     * @param pageable Paginacion de spring.
+     * @param stateCode codigo de estado.
+     */
+    public Response getAllCitiesByStateCode(Pageable pageable, String stateCode);
+
+    /*
+     * Metodo que devuelve todas las ciudades por codigo de estado y codigo de municipio.
+     * @param pageable Paginacion de spring.
+     * @param stateCode codigo de estado.
+     * @param municipalityCdoe codigo de municipio que le asigna el estado.
+     */
+    public Response getAllCitiesByStateCodeAndMunicipalityCode(Pageable pageable, String stateCode, String municipalityCdoe);
 }

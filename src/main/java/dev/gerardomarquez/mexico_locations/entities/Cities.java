@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 public class Cities {
 
     /*
-     * Id de la ciudad
+     * Id de la ciudad del catalogo
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
