@@ -11,8 +11,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 
+import dev.gerardomarquez.mexico_locations.dtos.CityByStateDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityMunicipalityMappingDto;
+import dev.gerardomarquez.mexico_locations.dtos.CityMunicipalityMappingDtoByState;
 import dev.gerardomarquez.mexico_locations.dtos.MunicipalityDto;
 import dev.gerardomarquez.mexico_locations.dtos.PageDto;
 import dev.gerardomarquez.mexico_locations.dtos.Response;
@@ -246,34 +248,30 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
         Page<CitiesMunicipalitiesMappingTable> pageCitiesMunicipalitiesMapping = citiesMunicipalitiesMappingRepository
             .findByMunicipalityStatesStateCode(stateCode, pageable);
 
-        List<CityDto> listCityDto = pageCitiesMunicipalitiesMapping.getContent()
+        List<CityByStateDto> listCityDto = pageCitiesMunicipalitiesMapping.getContent()
             .stream()
             .filter(it -> !it.getCities().getName().isBlank() )
             .map(
                 it -> {
-                    CityDto cityDto = new CityDto();
+                    CityByStateDto cityDto = new CityByStateDto();
                     cityDto.setId(it.getCities().getId() );
                     cityDto.setName(it.getCities().getName() );
 
-                    List<CityMunicipalityMappingDto> listCityMunicipalityMapping = new ArrayList<>();
-                    CityMunicipalityMappingDto cityMunicipalityMappingDto = new CityMunicipalityMappingDto();
-                    cityMunicipalityMappingDto.setCityCode(it.getCityCode() );
-                    cityMunicipalityMappingDto.setId(it.getId() );
-                    cityMunicipalityMappingDto.setMunicipality(it.getMunicipality().getMunicipalities().getName() );
-                    cityMunicipalityMappingDto.setMunicipalityCode(it.getMunicipality().getMunicipalityCode() );
-                    cityMunicipalityMappingDto.setState(it.getMunicipality().getStates().getName() );
-                    cityMunicipalityMappingDto.setStateCode(it.getMunicipality().getStates().getStateCode() );
-                    cityMunicipalityMappingDto.setIdMunicipality(it.getMunicipality().getId() );
-                    listCityMunicipalityMapping.add(cityMunicipalityMappingDto);
+                    CityMunicipalityMappingDtoByState cityMunicipalityMapping = new CityMunicipalityMappingDtoByState();
+                    cityMunicipalityMapping.setCityCode(it.getCityCode() );
+                    cityMunicipalityMapping.setId(it.getId() );
+                    cityMunicipalityMapping.setIdMunicipality(it.getMunicipality().getId() );
+                    cityMunicipalityMapping.setMunicipality(it.getMunicipality().getMunicipalities().getName() );
+                    cityMunicipalityMapping.setMunicipalityCode(it.getMunicipality().getMunicipalityCode() );
 
-                    cityDto.setMunicipalityData(listCityMunicipalityMapping);
+                    cityDto.setMunicipalityCityData(cityMunicipalityMapping);
 
                     return cityDto;
                 }
             )
             .collect(Collectors.toList() );
 
-        PageDto<CityDto> pageDto = new PageDto();
+        PageDto<CityByStateDto> pageDto = new PageDto();
         pageDto.setContent(listCityDto);
         pageDto.setPageNumber(pageCitiesMunicipalitiesMapping.getNumber() );
         pageDto.setPageSize(pageCitiesMunicipalitiesMapping.getSize() );
