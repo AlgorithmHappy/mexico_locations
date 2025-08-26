@@ -12,14 +12,19 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 
+import dev.gerardomarquez.mexico_locations.dtos.AllInformationDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityByStateAndMunicipalityCodeDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityByStateDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityMunicipalityMappingDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityMunicipalityMappingDtoByState;
+import dev.gerardomarquez.mexico_locations.dtos.KindOfSuburbDto;
 import dev.gerardomarquez.mexico_locations.dtos.MunicipalityDto;
+import dev.gerardomarquez.mexico_locations.dtos.MunicipalityWithoutIdDto;
+import dev.gerardomarquez.mexico_locations.dtos.OfficeDto;
 import dev.gerardomarquez.mexico_locations.dtos.PageDto;
 import dev.gerardomarquez.mexico_locations.dtos.Response;
+import dev.gerardomarquez.mexico_locations.dtos.StateWithoutIdDto;
 import dev.gerardomarquez.mexico_locations.dtos.StatesDto;
 import dev.gerardomarquez.mexico_locations.dtos.SuburbDto;
 import dev.gerardomarquez.mexico_locations.dtos.ZipCodeDto;
@@ -31,6 +36,7 @@ import dev.gerardomarquez.mexico_locations.repositories.CitiesRepository;
 import dev.gerardomarquez.mexico_locations.repositories.MunicipalitiesStatesMappingRepository;
 import dev.gerardomarquez.mexico_locations.repositories.StatesRepository;
 import dev.gerardomarquez.mexico_locations.repositories.SuburbMunicipalitiesStatesMappingRepository;
+import dev.gerardomarquez.mexico_locations.repositories.projections.AllInformationProjection;
 import dev.gerardomarquez.mexico_locations.utils.Constants;
 
 /*
@@ -324,6 +330,63 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
 
         Response response = new Response();
         response.setData(pageCities);
+        response.setSuccess(Boolean.TRUE);
+        response.setMessage(messageSource.getMessage(Constants.MSG_SUCCESS, null, Locale.getDefault() ) );
+        
+        return response;
+    }
+
+    /*
+    * {@inheritDoc}
+    */
+    @Override
+    public Response getAllCitiesByStateCodeAndMunicipalityCode(Pageable pageable, String zipCode) {
+        Page<AllInformationProjection> suburbAllInformation = suburbMunicipalitiesStatesMappingRepository.findByZipCodeZipCode(zipCode, pageable);
+
+        List<AllInformationDto> listAllInformationDto = suburbAllInformation.getContent().stream()
+            .map(
+                it -> {
+                    AllInformationDto allInformationDto = new AllInformationDto();
+
+                    allInformationDto.setCode(it.getSuburbCode() );
+                    allInformationDto.setId(it.getId() );
+
+                    KindOfSuburbDto kindOfSuburbDto = new KindOfSuburbDto();
+                    kindOfSuburbDto.setCode(it.getKindOfSuburb().getKindOfSuburbCode() );
+                    kindOfSuburbDto.setName(it.getKindOfSuburb().getKindOfSuburb() );
+                    allInformationDto.setKindOfSuburb(kindOfSuburbDto);
+
+                    MunicipalityWithoutIdDto municipality = new MunicipalityWithoutIdDto();
+                    municipality.setCode(it.getMunicipalityStateMappingTable().getMunicipalityCode() );
+                    municipality.setName(it.getMunicipalityStateMappingTable().getMunicipalities().getName() );
+                    allInformationDto.setMunicipalityInformation(municipality );
+
+                    allInformationDto.setName(it.getSuburb().getName() );
+
+                    OfficeDto officeDto = new OfficeDto();
+                    officeDto.setCode(it.getZipCode().getOfficeZipCode().getOfficeCode() );
+                    allInformationDto.setOfficeInformation(officeDto);
+
+                    StateWithoutIdDto state = new StateWithoutIdDto();
+                    state.setCode(it.getMunicipalityStateMappingTable().getStates().getStateCode() );
+                    state.setName(it.getMunicipalityStateMappingTable().getStates().getName() );
+                    allInformationDto.setStateInformation(state);
+
+                    allInformationDto.setZone(it.getZone().getZone() );
+
+                    return allInformationDto;
+                }
+            )
+            .collect(Collectors.toList() );
+
+        PageDto pageDto = new PageDto();
+        pageDto.setContent(listAllInformationDto);
+        pageDto.setPageNumber(suburbAllInformation.getNumber() );
+        pageDto.setPageSize(suburbAllInformation.getSize() );
+        pageDto.setTotalElements(suburbAllInformation.getTotalElements() );
+
+        Response response = new Response();
+        response.setData(pageDto);
         response.setSuccess(Boolean.TRUE);
         response.setMessage(messageSource.getMessage(Constants.MSG_SUCCESS, null, Locale.getDefault() ) );
         

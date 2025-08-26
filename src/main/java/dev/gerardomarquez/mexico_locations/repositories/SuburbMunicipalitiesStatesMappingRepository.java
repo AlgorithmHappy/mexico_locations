@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import dev.gerardomarquez.mexico_locations.dtos.SuburbDto;
 import dev.gerardomarquez.mexico_locations.dtos.ZipCodeDto;
 import dev.gerardomarquez.mexico_locations.entities.SuburbMunicipalitiesStatesMappingTable;
+import dev.gerardomarquez.mexico_locations.repositories.projections.AllInformationProjection;
 
 /*
  * Repositorio que se conecta a la base de datos para traer los cruces de los asentamientos
@@ -52,6 +53,17 @@ public interface SuburbMunicipalitiesStatesMappingRepository extends JpaReposito
         @Param("stateCode") String stateCode,
         @Param("municipalityCode") String municipalityCode,
         @Param("zipCode") String zipCode,
+        Pageable pageable
+    );
+
+    /*
+     * Metodo que devuevle la proyeccion con toda la informacion de las localidades de mexico.
+     * @param Codigo postal.
+     * @param Paginado de spring.
+     * @param pageable Paginado de Srping.
+     */
+    public Page<AllInformationProjection> findByZipCodeZipCode(
+        String zipCode,
         Pageable pageable
     );
 }

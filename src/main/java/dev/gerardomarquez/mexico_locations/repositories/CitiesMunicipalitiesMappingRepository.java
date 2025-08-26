@@ -37,5 +37,4 @@ public interface CitiesMunicipalitiesMappingRepository extends JpaRepository<Cit
         @Param("municipalityCode") String municipalityCode,
         Pageable pageable
     );
-
 }

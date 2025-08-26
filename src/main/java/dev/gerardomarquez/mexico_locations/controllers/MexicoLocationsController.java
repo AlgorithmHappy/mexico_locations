@@ -131,5 +131,21 @@ public class MexicoLocationsController {
         
         return ResponseEntity.ok().body(response);
     }
+
+    /*
+     * Endpoint que devuelve todas los asentamientos de mexico dependiendo su codigo postal.
+     * @param zipCode Codigo postal.
+     * @param pageable Paginacion de spring.
+     * @return Clase generica en donde en el data devuelve el arreglo de ciudades.
+     */
+    @GetMapping("/suburbs/{zipCode}")
+    public ResponseEntity<Response>  getMethodName(
+        @PathVariable("zipCode") String zipCode,
+        Pageable pageable
+    ) {
+        Response response = mexicoLocationsService.getAllCitiesByStateCodeAndMunicipalityCode(pageable, zipCode);
+        return ResponseEntity.ok().body(response);
+    }
+    
     
 }
