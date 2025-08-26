@@ -5,12 +5,14 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
+import org.apache.tomcat.util.bcel.Const;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 
+import dev.gerardomarquez.mexico_locations.dtos.CityByStateAndMunicipalityCodeDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityByStateDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityMunicipalityMappingDto;
@@ -285,11 +287,47 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
         return response;
     }
 
+    /*
+    * {@inheritDoc}
+    */
     @Override
-    public Response getAllCitiesByStateCodeAndMunicipalityCode(Pageable pageable, String stateCode,
-            String municipalityCdoe) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAllCitiesByStateCodeAndMunicipalityCode'");
+    public Response getAllCitiesByStateCodeAndMunicipalityCode(
+        Pageable pageable,
+        String stateCode,
+        String municipalityCode
+    ) {
+        Page<CitiesMunicipalitiesMappingTable> pageCitiesMunicipalitiesMapping = citiesMunicipalitiesMappingRepository
+            .findByMunicipalityStatesStateCodeAndMunicipalityMunicipalityCode(
+                stateCode,
+                municipalityCode,
+                pageable
+            );
+
+        List<CityByStateAndMunicipalityCodeDto> listCities = pageCitiesMunicipalitiesMapping.stream()
+            .map(
+                it -> {
+                    CityByStateAndMunicipalityCodeDto cityByStateAndMunicipalityCode = new CityByStateAndMunicipalityCodeDto();
+                    cityByStateAndMunicipalityCode.setCityCode(it.getCityCode() );
+                    cityByStateAndMunicipalityCode.setId(it.getId() );
+                    cityByStateAndMunicipalityCode.setName(it.getCities().getName() );
+
+                    return cityByStateAndMunicipalityCode;
+                }
+            )
+            .collect(Collectors.toList() );
+
+        PageDto<CityByStateAndMunicipalityCodeDto> pageCities = new PageDto();
+        pageCities.setContent(listCities);
+        pageCities.setPageNumber(pageCitiesMunicipalitiesMapping.getNumber() );
+        pageCities.setPageSize(pageCitiesMunicipalitiesMapping.getSize() );
+        pageCities.setTotalElements(pageCitiesMunicipalitiesMapping.getTotalElements() );
+
+        Response response = new Response();
+        response.setData(pageCities);
+        response.setSuccess(Boolean.TRUE);
+        response.setMessage(messageSource.getMessage(Constants.MSG_SUCCESS, null, Locale.getDefault() ) );
+        
+        return response;
     }
 
 }

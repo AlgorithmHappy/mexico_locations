@@ -114,5 +114,22 @@ public class MexicoLocationsController {
         return ResponseEntity.ok(response);
     }
     
+    /*
+     * Endpoint que devuelve todas las ciudades de mexico dependiendo el codigo de estado y de muncipio.
+     * @param stateCode Codigo de estado segun la INEGI.
+     * @param municipalityCode Codigo de municipio segun el estado
+     * @param pageable Paginacion de spring.
+     * @return Clase generica en donde en el data devuelve el arreglo de ciudades.
+     */
+    @GetMapping("/states/{stateCode}/municipalities/{municipalityCode}/cities")
+    public ResponseEntity<Response> getMethodName(
+        @PathVariable("stateCode") String stateCode,
+        @PathVariable("municipalityCode") String municipalityCode,
+        Pageable pageable
+    ) {
+        Response response = mexicoLocationsService.getAllCitiesByStateCodeAndMunicipalityCode(pageable, stateCode, municipalityCode);
+        
+        return ResponseEntity.ok().body(response);
+    }
     
 }
