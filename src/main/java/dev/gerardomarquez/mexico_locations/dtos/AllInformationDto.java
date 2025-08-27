@@ -43,6 +43,11 @@ public class AllInformationDto implements Serializable {
     private MunicipalityWithoutIdDto municipalityInformation;
 
     /*
+     * Informacion sobre la ciudad en el caso de haber.
+     */
+    private CityWithoutIdDto cityInformation;
+
+    /*
      * Informacion del estado al que pertenece
      */
     private StateWithoutIdDto stateInformation;

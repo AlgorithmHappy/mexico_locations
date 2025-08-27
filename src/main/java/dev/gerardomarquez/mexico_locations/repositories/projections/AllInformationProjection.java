@@ -101,6 +101,9 @@ public interface AllInformationProjection {
          */
         public MunicipalityProjection getMunicipalities();
 
+        /*
+         * Proyeccion para el municipio
+         */
         public interface MunicipalityProjection {
         
             /*
@@ -108,6 +111,41 @@ public interface AllInformationProjection {
              * @return Nombre del municipio.
              */
             public String getName();
+        }
+
+
+        /*
+         * Proyeccion que contiene la informacion del cruce de ciudades con el cruce de estado y municipio.
+         * @return Devuelve la proyeccion de la tabla de cruce de ciudades.
+         */
+        public CityStateMunicipalityMappingProjection getCityMappingTable();
+        /*
+         * Proyeccion para la tabla de cruce de ciuadad
+         */
+        public interface CityStateMunicipalityMappingProjection {
+        
+            /*
+             * Codigo de ciudad segun el municipio al que pertenece.
+             * @return Devuelve el codigo de ciudad segun el municipio al que pertenece.
+             */
+            public String getCityCode();
+
+            /*
+             * Proyeccion para la tabla de las ciudades
+             */
+            public CityProjection getCities();
+
+            /*
+            * Proyeccion de la tabla de ciudades
+            */
+            public interface CityProjection {
+            
+                /*
+                 * Nombre de la ciudad.
+                 * @return Devuelve el nombre de la ciudad
+                 */
+                public String getName();
+            }
         }
         
     }

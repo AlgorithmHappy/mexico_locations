@@ -18,6 +18,7 @@ import dev.gerardomarquez.mexico_locations.dtos.CityByStateDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityMunicipalityMappingDto;
 import dev.gerardomarquez.mexico_locations.dtos.CityMunicipalityMappingDtoByState;
+import dev.gerardomarquez.mexico_locations.dtos.CityWithoutIdDto;
 import dev.gerardomarquez.mexico_locations.dtos.KindOfSuburbDto;
 import dev.gerardomarquez.mexico_locations.dtos.MunicipalityDto;
 import dev.gerardomarquez.mexico_locations.dtos.MunicipalityWithoutIdDto;
@@ -371,6 +372,11 @@ public class MexicoLocationsServiceImplementation implements MexicoLocationsServ
                     state.setCode(it.getMunicipalityStateMappingTable().getStates().getStateCode() );
                     state.setName(it.getMunicipalityStateMappingTable().getStates().getName() );
                     allInformationDto.setStateInformation(state);
+
+                    CityWithoutIdDto city = new CityWithoutIdDto();
+                    city.setCode(it.getMunicipalityStateMappingTable().getCityMappingTable().getCityCode() );
+                    city.setName(it.getMunicipalityStateMappingTable().getCityMappingTable().getCities().getName() );
+                    allInformationDto.setCityInformation(city);
 
                     allInformationDto.setZone(it.getZone().getZone() );
 
